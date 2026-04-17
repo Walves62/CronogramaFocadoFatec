@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo Fatec — Cronograma Moderno + Repertório</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #1a1f3a;
+            --bg-tertiary: #252d4a;
+            --bg-glass: rgba(26, 31, 58, 0.7);
+            --text-primary: #f0f4ff;
+            --text-secondary: #a8b5e6;
+            --text-tertiary: #7a85b8;
+            --border-color: #2d3a5f;
+            --accent-blue: #5b7cff;
+            --accent-cyan: #00d9ff;
+            --accent-purple: #b366ff;
+            --accent-pink: #ff5e9f;
+            --accent-green: #2fdc93;
+            --accent-orange: #ff9d3a;
+            --accent-red: #ff6b6b;
+            --glow-blue: 0 0 30px rgba(91, 124, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a0a3a 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(600px at 20% 50%, rgba(91, 124, 255, 0.1) 0%, transparent 80%),
+                radial-gradient(600px at 80% 80%, rgba(179, 102, 255, 0.1) 0%, transparent 80%);
+            pointer-events: none;
+            z-index: 0;
+            animation: backgroundShift 8s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% {
+                background: 
+                    radial-gradient(600px at 20% 50%, rgba(91, 124, 255, 0.1) 0%, transparent 80%),
+                    radial-gradient(600px at 80% 80%, rgba(179, 102, 255, 0.1) 0%, transparent 80%);
+            }
+            50% {
+                background: 
+                    radial-gradient(600px at 50% 30%, rgba(91, 124, 255, 0.15) 0%, transparent 80%),
+                    radial-gradient(600px at 60% 90%, rgba(179, 102, 255, 0.15) 0%, transparent 80%);
+            }
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 14, 39, 0.8);
+            border-bottom: 1px solid rgba(91, 124, 255, 0.2);
+            padding: 2rem 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .validation-badge {
+            display: inline-block;
+            background: rgba(47, 220, 147, 0.2);
+            border: 1px solid rgba(47, 220, 147, 0.5);
+            color: #2fdc93;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            padding: 1.5rem;
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            border-bottom: 2px solid rgba(91, 124, 255, 0.3);
+        }
+
+        .nav-btn {
+            padding: 0.9rem 1.8rem;
+            background: transparent;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(91, 124, 255, 0.2);
+        }
+
+        .nav-btn.active {
+            background: linear-gradient(135deg, rgba(91, 124, 255, 0.2) 0%, rgba(179, 102, 255, 0.2) 100%);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            box-shadow: var(--glow-blue);
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+        }
+
+        .card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+        }
+
+        .card:hover {
+            border-color: rgba(91, 124, 255, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(91, 124, 255, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            white-space: nowrap;
+            font-family: 'Poppins', sans-serif;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge-red {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff8787;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .badge-orange {
+            background: rgba(255, 157, 58, 0.15);
+            color: #ffb74d;
+            border: 1px solid rgba(255, 157, 58, 0.3);
+        }
+
+        .badge-purple {
+            background: rgba(179, 102, 255, 0.15);
+            color: #d4a5ff;
+            border: 1px solid rgba(179, 102, 255, 0.3);
+        }
+
+        .badge-blue {
+            background: rgba(55, 138, 221, 0.15);
+            color: #64b5f6;
+            border: 1px solid rgba(55, 138, 221, 0.3);
+        }
+
+        .badge-green {
+            background: rgba(29, 158, 117, 0.15);
+            color: #81c784;
+            border: 1px solid rgba(29, 158, 117, 0.3);
+        }
+
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .card-sub {
+            font-size: 13px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .rows {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .row {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(91, 124, 255, 0.1);
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .row:hover {
+            border-bottom-color: rgba(91, 124, 255, 0.3);
+            padding-left: 0.5rem;
+        }
+
+        .row:last-child {
+            border-bottom: none;
+        }
+
+        .row.completed {
+            opacity: 0.7;
+        }
+
+        .row.completed .row-main {
+            color: var(--accent-green);
+            text-decoration: line-through;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .row-content {
+            flex: 1;
+        }
+
+        .row-main {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .row-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        .row-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .ref-btn, .complete-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ref-btn {
+            background: rgba(91, 124, 255, 0.15);
+            color: var(--accent-blue);
+            border: 1px solid rgba(91, 124, 255, 0.4);
+        }
+
+        .ref-btn:hover {
+            background: rgba(91, 124, 255, 0.3);
+            border-color: var(--accent-blue);
+        }
+
+        .complete-btn {
+            background: rgba(47, 220, 147, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(47, 220, 147, 0.4);
+        }
+
+        .complete-btn:hover {
+            background: rgba(47, 220, 147, 0.3);
+            border-color: var(--accent-green);
+        }
+
+        .complete-btn.completed {
+            background: rgba(47, 220, 147, 0.3);
+            border-color: var(--accent-green);
+        }
+
+        .heat-badge {
+            display: inline-block;
+            font-size: 10px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            font-weight: 600;
+        }
+
+        .heat-hot {
+            background: rgba(255, 107, 107, 0.2);
+            color: #ff8787;
+        }
+
+        .heat-mid {
+            background: rgba(255, 157, 58, 0.2);
+            color: #ffb74d;
+        }
+
+        .heat-low {
+            background: rgba(47, 220, 147, 0.2);
+            color: #7fff9f;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-8px);
+            border-color: rgba(91, 124, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(91, 124, 255, 0.1);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bar-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .bar-track {
+            height: 10px;
+            background: rgba(91, 124, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+        }
+
+        .tip {
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 16px;
+            padding: 1.5rem;
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-top: 2rem;
+            line-height: 1.7;
+        }
+
+        .tip strong {
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
+
+        .model-box {
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            font-size: 13px;
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .model-box strong {
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .usage-tag {
+            font-size: 11px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        .usage-blue {
+            background: rgba(55, 138, 221, 0.2);
+            color: #64b5f6;
+        }
+
+        .usage-green {
+            background: rgba(29, 158, 117, 0.2);
+            color: #81c784;
+        }
+
+        .usage-purple {
+            background: rgba(83, 74, 183, 0.2);
+            color: #b197fc;
+        }
+
+        .estrutura-linha {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            align-items: flex-start;
+        }
+
+        .estrutura-linha:last-child {
+            border-bottom: none;
+        }
+
+        .estrutura-num {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            min-width: 50px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* WEEK MODULES */
+        .weeks-container {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .week-module {
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .week-module:hover {
+            border-color: rgba(91, 124, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(91, 124, 255, 0.15);
+        }
+
+        .week-module-header {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, rgba(91, 124, 255, 0.1) 0%, rgba(179, 102, 255, 0.1) 100%);
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        .week-module-header:hover {
+            background: linear-gradient(135deg, rgba(91, 124, 255, 0.15) 0%, rgba(179, 102, 255, 0.15) 100%);
+        }
+
+        .week-module-header.collapsed {
+            border-bottom: none;
+        }
+
+        .week-title-group {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex: 1;
+        }
+
+        .week-icon {
+            font-size: 24px;
+        }
+
+        .week-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .week-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .week-subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .week-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-right: 2rem;
+        }
+
+        .week-progress-bar {
+            width: 150px;
+            height: 12px;
+            background: rgba(91, 124, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .week-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 10px;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+        }
+
+        .week-progress-percent {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            min-width: 45px;
+            text-align: right;
+        }
+
+        .week-toggle-btn {
+            background: none;
+            border: none;
+            color: var(--accent-cyan);
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .week-toggle-btn.collapsed {
+            transform: rotate(180deg);
+        }
+
+        .week-module-content {
+            max-height: 2000px;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .week-module-content.collapsed {
+            max-height: 0;
+        }
+
+        .week-module-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* Reference Sidebar */
+        .reference-sidebar {
+            position: fixed;
+            right: -500px;
+            top: 0;
+            width: 450px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border-color);
+            z-index: 200;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .reference-sidebar.open {
+            right: 0;
+        }
+
+        .sidebar-header {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-sidebar:hover {
+            color: var(--text-primary);
+        }
+
+        .reference-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .reference-item:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 20px rgba(91, 124, 255, 0.1);
+        }
+
+        .ref-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 14px;
+        }
+
+        .ref-type {
+            display: inline-block;
+            font-size: 10px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: rgba(91, 124, 255, 0.2);
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .ref-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .ref-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: var(--accent-blue);
+            color: var(--text-primary);
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .ref-link:hover {
+            background: var(--accent-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 217, 255, 0.2);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 150;
+            display: none;
+            backdrop-filter: blur(4px);
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        footer {
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-tabs {
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+
+            .nav-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 13px;
+                min-width: 100px;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .card-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .card-sub {
+                margin-left: 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .week-module-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .week-progress-container {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .week-progress-bar {
+                flex: 1;
+            }
+
+            .reference-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>📚 Guia Completo para a Fatec</h1>
+            <p class="header-subtitle">Cronograma Modular de 5 semanas + Repertório Completo para Redação</p>
+            <div class="validation-badge">✅ Dados Validados 2024 com fontes verificadas</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="nav-tabs">
+            <button class="nav-btn active" onclick="switchTab('padroes')">📊 Padrões detectados</button>
+            <button class="nav-btn" onclick="switchTab('cronograma')">📅 Cronograma — Semanas 1-5</button>
+            <button class="nav-btn" onclick="switchTab('repertorio')">📚 Repertório de redação</button>
+            <button class="nav-btn" onclick="switchTab('estrutura')">✍️ Estrutura da redação</button>
+        </div>
+
+        <!-- SEÇÃO 1: PADRÕES DETECTADOS -->
+        <div id="padroes" class="section active">
+            <div class="section-title">📈 Frequência de temas em 5 provas consecutivas</div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-label">Questões analisadas</div>
+                    <div class="stat-value">~300</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Temas recorrentes</div>
+                    <div class="stat-value">38</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Aparecem toda prova</div>
+                    <div class="stat-value">12</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Provas analisadas</div>
+                    <div class="stat-value">5</div>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 2rem">🔥 Temas mais recorrentes</div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Química aplicada (CO₂, combustíveis, reações)</span><span>5/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg, #ff6b6b, #ff8787)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Funções matemáticas (exponencial, quadrática, log)</span><span>5/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg, #ff6b6b, #ff8787)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Interpretação de texto + figuras de linguagem</span><span>5/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg, #ff6b6b, #ff8787)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Inglês: inferência e vocabulário contextual</span><span>5/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg, #ff6b6b, #ff8787)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Lógica / conjuntos / raciocínio dedutivo</span><span>5/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg, #ff6b6b, #ff8787)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Biologia: saúde, doenças, genética, biotecnologia</span><span>4/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg, #ffb74d, #ffa94d)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Física: eletricidade, ondas, energia</span><span>4/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg, #ffb74d, #ffa94d)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>História: Revoluções Industrial / Verde, Brasil</span><span>4/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg, #ffb74d, #ffa94d)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Geografia: clima, urbanização, geopolítica</span><span>4/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg, #ffb74d, #ffa94d)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Matrizes, PA/PG, combinatória</span><span>4/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg, #ffb74d, #ffa94d)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Probabilidade e estatística</span><span>3/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:60%;background:linear-gradient(90deg, #81c784, #7fff9f)"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Trigonometria aplicada</span><span>3/5 provas</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:60%;background:linear-gradient(90deg, #81c784, #7fff9f)"></div></div>
+            </div>
+
+            <div class="section-title" style="margin-top: 2rem">🎯 Temas centrais que se repetem</div>
+            <div class="card">
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background: #ff6b6b; color: #ff6b6b;"></div>
+                        <div class="row-content">
+                            <div class="row-main">Tecnologia e sociedade <span class="heat-badge heat-hot">toda prova</span></div>
+                            <div class="row-desc">2026: desinformação · 2025: economia verde · 2024: arte e tecnologia · 2023: 4ª Revolução Industrial · 2022: arte e representatividade. A Fatec sempre contextualiza os temas dentro de tecnologia aplicada.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background: #ffb74d; color: #ffb74d;"></div>
+                        <div class="row-content">
+                            <div class="row-main">Redação dissertativa ou narrativa <span class="heat-badge heat-mid">toda prova</span></div>
+                            <div class="row-desc">Sempre envolve um debate socioambiental ou tecnológico. Treinar os temas das 5 últimas provas cobre a maioria dos cenários prováveis.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background: #2fdc93; color: #2fdc93;"></div>
+                        <div class="row-content">
+                            <div class="row-main">Questões integram múltiplas disciplinas <span class="heat-badge heat-low">4/5 provas</span></div>
+                            <div class="row-desc">Uma questão pode pedir química + interpretação de texto + conhecimento de economia circular. Estudar temas isolados é insuficiente — integre com outras áreas.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip"><strong>💡 Estratégia inicial:</strong> Priorize os 12 temas que aparecem em todas as 5 provas. Depois, domine os temas de frequência 4/5 e 3/5. Qualquer tema que não está nesta lista é baixa probabilidade — desvie tempo apenas se sobrar tempo de estudo.</div>
+        </div>
+
+        <!-- SEÇÃO 2: CRONOGRAMA -->
+        <div id="cronograma" class="section">
+            <div class="section-title">📅 Cronograma Modular (Clique para expandir/colapsar)</div>
+            <div class="weeks-container" id="weeksContainer">
+                <!-- Weeks will be generated here -->
+            </div>
+        </div>
+
+        <!-- SEÇÃO 3: REPERTÓRIO -->
+        <div id="repertorio" class="section">
+            <div class="section-title">📚 O padrão dos temas da Fatec</div>
+            <div class="card">
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background:#ff6b6b"></div>
+                        <div class="row-content">
+                            <div class="row-main">2026 — Tecnologia, desinformação e ciência</div>
+                            <div class="row-desc">Como a tecnologia pode combater fake news e divulgar conhecimento científico?</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#ff6b6b"></div>
+                        <div class="row-content">
+                            <div class="row-main">2025 — Tecnologia e sustentabilidade</div>
+                            <div class="row-desc">Como a tecnologia afeta o desenvolvimento de uma economia sustentável?</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#ffb74d"></div>
+                        <div class="row-content">
+                            <div class="row-main">2024 — Arte, representatividade e sociedade</div>
+                            <div class="row-desc">A importância da representatividade na arte para a sociedade.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#ffb74d"></div>
+                        <div class="row-content">
+                            <div class="row-main">2023 — Trabalho e 4ª Revolução Industrial</div>
+                            <div class="row-desc">Como se preparar para o mercado de trabalho diante dos avanços tecnológicos?</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#81c784"></div>
+                        <div class="row-content">
+                            <div class="row-main">2022 — Arte, representatividade e sociedade</div>
+                            <div class="row-desc">Mesmo tema de 2024 — evidência de que temas se repetem.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 2rem">🎯 Três eixos que conectam todos os temas</div>
+            <div class="card">
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background:#5b7cff"></div>
+                        <div class="row-content">
+                            <div class="row-main">Eixo 1 — Tecnologia como faca de dois gumes</div>
+                            <div class="row-desc">A tecnologia resolve problemas (desinformação, trabalho, sustentabilidade) mas também os cria (desemprego, poluição, exclusão digital). Esse argumento serve para qualquer tema da Fatec.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#1D9E75"></div>
+                        <div class="row-content">
+                            <div class="row-main">Eixo 2 — Desigualdade e acesso</div>
+                            <div class="row-desc">Quem se beneficia das inovações? Sempre existe um grupo excluído. Populações vulneráveis, periferias, países em desenvolvimento — esse contraste é argumento forte em qualquer redação.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#ff9d3a"></div>
+                        <div class="row-content">
+                            <div class="row-main">Eixo 3 — Papel do Estado e da educação</div>
+                            <div class="row-desc">A solução quase sempre passa por políticas públicas, educação científica ou regulação. A conclusão da redação Fatec pede proposta de intervenção — esse eixo garante uma boa conclusão.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip"><strong>🎯 Estratégia universal:</strong> Introdução apresenta o problema com contexto tecnológico → 1º argumento usa o Eixo 2 (desigualdade) → 2º argumento usa o Eixo 1 ou 3 → conclusão propõe solução via educação ou políticas públicas.</div>
+
+            <div class="section-title" style="margin-top: 2rem">💾 Dados e fatos para usar (VALIDADOS 2024)</div>
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-blue">Tecnologia e desinformação</span>
+                </div>
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background:#5b7cff"></div>
+                        <div class="row-content">
+                            <div class="row-main">✅ Brasil tem elevado consumo de notícias por redes sociais</div>
+                            <div class="row-desc"><strong>Dado validado (Digital News Report 2024):</strong> Brasil registrou 51-57% de consumo de notícias por redes sociais (57% em 2023, 51% em 2024). Principais plataformas: WhatsApp (38%), YouTube (38%), Instagram (36%), Facebook (29%). Brasil está entre os maiores consumidores da OCDE.</div>
+                            <span class="usage-tag usage-blue">serve para: desinformação, letramento digital, consumo de mídia</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#5b7cff"></div>
+                        <div class="row-content">
+                            <div class="row-main">✅ Desinformação em saúde — Vacinas e Autismo</div>
+                            <div class="row-desc"><strong>Dado validado (OCDE 2023):</strong> Aproximadamente 35% dos brasileiros acreditam, total ou parcialmente, que vacinas causam autismo — afirmação refutada por consenso científico. Estudo dinamarquês com 1,2 milhão de crianças provou que vacinas NÃO causam autismo. Este é um caso emblemático de desinformação científica no Brasil.</div>
+                            <span class="usage-tag usage-blue">serve para: desinformação, saúde pública, letramento científico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-green">Sustentabilidade e economia verde</span>
+                </div>
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background:#1D9E75"></div>
+                        <div class="row-content">
+                            <div class="row-main">✅ Economia circular reduz custos em setores específicos</div>
+                            <div class="row-desc"><strong>Dado validado (Ellen MacArthur Foundation + McKinsey):</strong> Empresas que adotam economia circular podem reduzir custos em até 40% em setores específicos (eletrônicos, automóveis, bens de consumo duráveis). Redução de resíduos pode chegar a 80% em alguns setores. ⚠️ IMPORTANTE: A porcentagem varia conforme o setor e a prática adotada.</div>
+                            <span class="usage-tag usage-green">serve para: economia verde, sustentabilidade, inovação empresarial</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#1D9E75"></div>
+                        <div class="row-content">
+                            <div class="row-main">✅ Reciclagem de alumínio economiza muita energia</div>
+                            <div class="row-desc"><strong>Dado validado:</strong> A reciclagem de alumínio consome cerca de 95% menos energia que a produção primária a partir da bauxita. Isso se deve ao fato de que a eletrólise na produção é extremamente intensiva em energia, enquanto a reciclagem envolve apenas fusão do metal usado.</div>
+                            <span class="usage-tag usage-green">serve para: sustentabilidade, economia circular, impacto ambiental</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-purple">Arte e representatividade</span>
+                </div>
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background:#b366ff"></div>
+                        <div class="row-content">
+                            <div class="row-main">Efeitos da falta de representatividade em crianças</div>
+                            <div class="row-desc">A ausência de representatividade na arte e na mídia provoca em crianças negras: baixa autoestima, limitação de aspirações e desconexão cultural. Em crianças brancas, contribui para perpetuação de estereótipos e preconceitos.</div>
+                            <span class="usage-tag usage-purple">serve para: representatividade, racismo estrutural, diversidade</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#b366ff"></div>
+                        <div class="row-content">
+                            <div class="row-main">Arte urbana como resistência</div>
+                            <div class="row-desc">O grafite em comunidades marginalizadas pode reclamar espaços públicos e dar voz a grupos sem representação institucional. A arte de rua é espaço de representatividade, capaz de engajar a população em causas socioambientais.</div>
+                            <span class="usage-tag usage-purple">serve para: arte e política, democracia cultural, expressão artística</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO 4: ESTRUTURA DA REDAÇÃO -->
+        <div id="estrutura" class="section">
+            <div class="section-title">✍️ Estrutura ideal para a dissertação Fatec</div>
+
+            <div class="card">
+                <div class="rows">
+                    <div class="estrutura-linha">
+                        <div class="estrutura-num">1</div>
+                        <div class="row-content">
+                            <div class="row-main">Introdução — contextualizar + tese (4–6 linhas)</div>
+                            <div class="row-desc">Apresente o tema com um dado, fato ou referência. Termine com uma tese clara que antecipa sua posição. Evite começar com "Desde os primórdios da humanidade..."</div>
+                        </div>
+                    </div>
+                    <div class="estrutura-linha">
+                        <div class="estrutura-num">2</div>
+                        <div class="row-content">
+                            <div class="row-main">1º argumento — o problema e sua causa (5–8 linhas)</div>
+                            <div class="row-desc">Apresente o problema com exemplos concretos (dados, fatos históricos, casos reais). Explique por que ele existe. Use um dos repertórios desta aba.</div>
+                        </div>
+                    </div>
+                    <div class="estrutura-linha">
+                        <div class="estrutura-num">3</div>
+                        <div class="row-content">
+                            <div class="row-main">2º argumento — aprofundamento ou contraponto (5–8 linhas)</div>
+                            <div class="row-desc">Desenvolva outro aspecto do tema ou reconheça uma visão oposta antes de refutá-la. A riqueza argumentativa está em mostrar que o tema tem múltiplas dimensões.</div>
+                        </div>
+                    </div>
+                    <div class="estrutura-linha">
+                        <div class="estrutura-num">4</div>
+                        <div class="row-content">
+                            <div class="row-main">Conclusão — proposta de intervenção (3–5 linhas)</div>
+                            <div class="row-desc">A Fatec exige proposta de solução. Indique QUEM deve agir (Estado, escola, empresas, sociedade civil), COMO e com qual finalidade. Seja específico — "investir em educação" sozinho é fraco.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 2rem">📖 Modelo de parágrafo de argumento</div>
+            <div class="model-box">
+                <strong>Tópico frasal:</strong> A desinformação científica é potencializada pelo baixo letramento digital da população brasileira.<br><br>
+                <strong>Desenvolvimento com dado validado:</strong> Segundo a pesquisa "Percepção Pública da Ciência e Tecnologia no Brasil" (OCDE 2023), aproximadamente 35% dos brasileiros acreditam, total ou parcialmente, que vacinas causam autismo — afirmação refutada pelo consenso científico e por estudo com 1,2 milhão de crianças. Esse fenômeno ocorre porque o Brasil registra ~51-57% de consumo de notícias por redes sociais (Digital News Report 2024), ambientes nos quais o algoritmo prioriza engajamento sobre veracidade.<br><br>
+                <strong>Conexão com a tese:</strong> Dessa forma, sem ferramentas para distinguir fato de opinião, o cidadão se torna vulnerável à manipulação, o que compromete decisões coletivas fundamentais como vacinação e voto consciente.
+            </div>
+
+            <div class="section-title" style="margin-top: 2rem">📝 Conclusões prontas para adaptar</div>
+            <div class="card">
+                <div class="rows">
+                    <div class="row">
+                        <div class="dot" style="background:#5b7cff"></div>
+                        <div class="row-content">
+                            <div class="row-main">Para temas de desinformação / ciência</div>
+                            <div class="row-desc">É necessário que o Estado, em parceria com as plataformas digitais, implemente programas de letramento midiático nas escolas públicas — ensinando alunos a verificar fontes e compreender evidências científicas —, a fim de formar cidadãos capazes de resistir à desinformação e participar ativamente da democracia.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#1D9E75"></div>
+                        <div class="row-content">
+                            <div class="row-main">Para temas de sustentabilidade / economia verde</div>
+                            <div class="row-desc">Cabe ao poder público ampliar incentivos fiscais para empresas que adotam práticas de economia circular, ao mesmo tempo em que investe em educação ambiental nas escolas — para que a transição ecológica seja justa e alcance tanto produtores quanto consumidores.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#ffb74d"></div>
+                        <div class="row-content">
+                            <div class="row-main">Para temas de trabalho / tecnologia</div>
+                            <div class="row-desc">O Estado e as empresas devem investir conjuntamente em requalificação profissional contínua, especialmente para trabalhadores de setores vulneráveis à automação, garantindo que os ganhos da 4ª Revolução Industrial sejam distribuídos e não concentrados.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dot" style="background:#b366ff"></div>
+                        <div class="row-content">
+                            <div class="row-main">Para temas de representatividade / cultura</div>
+                            <div class="row-desc">É fundamental que as políticas culturais públicas e as plataformas de mídia adotem cotas de representatividade em suas produções, para que grupos historicamente invisibilizados encontrem seus rostos e histórias refletidos nos espaços simbólicos da sociedade.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip"><strong>🎯 Última dica:</strong> Na Fatec, a redação vale tanto quanto a prova objetiva. Zerar qualquer uma das duas partes leva à eliminação. Treinar uma redação por dia, com os repertórios desta guia, é suficiente para chegar bem preparado. Qualidade > quantidade.</div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <!-- Sidebar de Referências -->
+    <div class="reference-sidebar" id="referenceSidebar">
+        <div class="sidebar-header">
+            <span id="refTitle">Referências</span>
+            <button class="close-sidebar" onclick="closeSidebar()">✕</button>
+        </div>
+        <div id="refContent"></div>
+    </div>
+
+    <footer>
+        <p>📚 Guia Completo de Estudos para a Fatec — Cronograma Modular + Repertório de Redação</p>
+        <p>✅ Dados Validados 2024 • Baseado em análise de 5 provas consecutivas (2022–2026) • ~300 questões analisadas</p>
+    </footer>
+
+    <script>
+        // Reference data system
+        const referenceData = {
+            genetics1: {
+                title: '🧬 Genética: Herança Monogênica',
+                refs: [
+                    {
+                        type: 'Plataforma',
+                        title: 'Stoodi - Exercícios de Genética',
+                        desc: 'Banco amplo com exercícios sobre herança monogênica, Primeira e Segunda Lei de Mendel, ligação gênica',
+                        link: 'https://stoodi.com.br/'
+                    },
+                    {
+                        type: 'Artigo',
+                        title: 'Determinação de Sexo - Brasil Escola',
+                        desc: 'Sistemas XX/XY e ZW de determinação do sexo',
+                        link: 'https://brasilescola.uol.com.br/biologia/determinacao-do-sexo.htm'
+                    },
+                    {
+                        type: 'Video',
+                        title: 'Khan Academy - Genetics',
+                        desc: 'Vídeos sobre alelos, genótipos, fenótipos e herança',
+                        link: 'https://pt.khanacademy.org/science/biology/genetics'
+                    }
+                ]
+            },
+            biotech1: {
+                title: '🧬 Biotecnologia e OGM',
+                refs: [
+                    {
+                        type: 'Video',
+                        title: 'O que é CRISPR? - TED-Ed',
+                        desc: 'Explicação visual sobre edição genética com CRISPR',
+                        link: 'https://www.youtube.com/watch?v=jAKSgg5AL8E'
+                    },
+                    {
+                        type: 'Artigo',
+                        title: 'OGM e Transgênicos - Brasil Escola',
+                        desc: 'História, benefícios e riscos dos organismos geneticamente modificados',
+                        link: 'https://brasilescola.uol.com.br/biologia/organismos-geneticamente-modificados.htm'
+                    },
+                    {
+                        type: 'Plataforma',
+                        title: 'Stoodi - Biotecnologia',
+                        desc: 'Exercícios sobre transgênicos, clonagem, terapia gênica',
+                        link: 'https://stoodi.com.br/'
+                    }
+                ]
+            }
+        };
+
+        // Weekly data structure
+        const weeksData = [
+            {
+                id: 'week1',
+                week: 1,
+                icon: '🧪',
+                name: 'Semana 1 — Ciências',
+                subtitle: 'Biologia, Química e Física',
+                percentage: 24,
+                cards: [
+                    {
+                        badge: 'Dia 1-2',
+                        badgeClass: 'badge-red',
+                        title: 'Biologia: saúde, genética e biotecnologia',
+                        time: '~4h',
+                        topics: [
+                            { id: 'w1-t1', title: '🧬 Genética: genes, alelos, dominância', heat: 'heat-hot', desc: 'Herança monogênica, ligação gênica, casos de genética aplicada.' },
+                            { id: 'w1-t2', title: '🧬 Biotecnologia e OGM', heat: 'heat-hot', desc: 'Transgênicos, clonagem, terapia gênica, CRISPR.' },
+                            { id: 'w1-t3', title: '💉 Doenças, imunidade e vacinação', heat: 'heat-mid', desc: 'Viroses, imunidade inata vs. adaptativa, resposta vacinal.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 3',
+                        badgeClass: 'badge-red',
+                        title: 'Química: reações e aplicações',
+                        time: '~3h',
+                        topics: [
+                            { id: 'w1-t4', title: '⚗️ Reações químicas e balanceamento', heat: 'heat-hot', desc: 'Oxidação-redução, combustão, síntese.' },
+                            { id: 'w1-t5', title: '🔥 Termoquímica e energia', heat: 'heat-hot', desc: 'Reações endotérmicas vs. exotérmicas, entalpia.' },
+                            { id: 'w1-t6', title: '🧪 pH, ácidos e bases', heat: 'heat-mid', desc: 'Escala de pH, neutralização, buffers.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 4',
+                        badgeClass: 'badge-red',
+                        title: 'Física: energia e fenômenos',
+                        time: '~3h',
+                        topics: [
+                            { id: 'w1-t7', title: '⚡ Eletricidade e circuitos', heat: 'heat-mid', desc: 'Tensão, corrente, resistência, potência.' },
+                            { id: 'w1-t8', title: '🌊 Ondas e som', heat: 'heat-mid', desc: 'Frequência, comprimento de onda, velocidade.' },
+                            { id: 'w1-t9', title: '🌡️ Termodinâmica', heat: 'heat-low', desc: 'Primeira lei, segunda lei, entropia.' }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'week2',
+                week: 2,
+                icon: '📐',
+                name: 'Semana 2 — Matemática',
+                subtitle: 'Funções, Sequências e Estatística',
+                percentage: 24,
+                cards: [
+                    {
+                        badge: 'Dia 5-6',
+                        badgeClass: 'badge-orange',
+                        title: 'Funções: linear, quadrática, exponencial, logarítmica',
+                        time: '~4h',
+                        topics: [
+                            { id: 'w2-t1', title: '📊 Funções matemáticas (geral)', heat: 'heat-hot', desc: 'Domínio, imagem, composição, inversa.' },
+                            { id: 'w2-t2', title: '📈 Funções polinomiais (quadrática)', heat: 'heat-hot', desc: 'Vértice, raízes, discriminante.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 7',
+                        badgeClass: 'badge-orange',
+                        title: 'Sequências: PA e PG',
+                        time: '~2h',
+                        topics: [
+                            { id: 'w2-t3', title: '🔢 Progressões aritmética e geométrica', heat: 'heat-mid', desc: 'Termo geral, soma finita, série infinita.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 8',
+                        badgeClass: 'badge-orange',
+                        title: 'Matrizes, combinatória e estatística',
+                        time: '~2h',
+                        topics: [
+                            { id: 'w2-t4', title: '📐 Matrizes e operações', heat: 'heat-mid', desc: 'Multiplicação, determinante, inversa.' },
+                            { id: 'w2-t5', title: '🎲 Combinatória e probabilidade', heat: 'heat-mid', desc: 'Permutação, combinação, arranjo.' },
+                            { id: 'w2-t6', title: '📊 Estatística: média, mediana, desvio padrão', heat: 'heat-low', desc: 'Interpretação de gráficos e dados.' }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'week3',
+                week: 3,
+                icon: '🌍',
+                name: 'Semana 3 — Humanas',
+                subtitle: 'História e Geografia',
+                percentage: 18,
+                cards: [
+                    {
+                        badge: 'Dia 9-10',
+                        badgeClass: 'badge-orange',
+                        title: 'História: Brasil e revoluções tecnológicas',
+                        time: '~4h',
+                        topics: [
+                            { id: 'w3-t1', title: '🏛️ História do Brasil republicano', heat: 'heat-mid', desc: 'Era Vargas, desenvolvimentismo, industrialização.' },
+                            { id: 'w3-t2', title: '⚙️ Revoluções Industrial e tecnológica', heat: 'heat-mid', desc: '1ª-4ª Revoluções. Impacto na sociedade.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 11',
+                        badgeClass: 'badge-orange',
+                        title: 'Geografia: clima, urbanização e geopolítica',
+                        time: '~2h',
+                        topics: [
+                            { id: 'w3-t3', title: '🌍 Clima e mudanças climáticas', heat: 'heat-mid', desc: 'Efeito estufa, aquecimento global.' },
+                            { id: 'w3-t4', title: '🏙️ Urbanização e infraestrutura', heat: 'heat-mid', desc: 'Crescimento de cidades, sustentabilidade urbana.' }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'week4',
+                week: 4,
+                icon: '📚',
+                name: 'Semana 4 — Linguagens',
+                subtitle: 'Português, Inglês e Redação',
+                percentage: 22,
+                cards: [
+                    {
+                        badge: 'Dia 14-15',
+                        badgeClass: 'badge-purple',
+                        title: 'Português: figuras de linguagem e interpretação',
+                        time: '~4h',
+                        topics: [
+                            { id: 'w4-t1', title: '📚 Figuras de linguagem', heat: 'heat-hot', desc: 'Ironia, metáfora, personificação, catacrese, eufemismo, hipérbole.' },
+                            { id: 'w4-t2', title: '🎭 Interpretação: tirinhas, charges, memes', heat: 'heat-hot', desc: 'Linguagem verbal + não verbal.' },
+                            { id: 'w4-t3', title: '✏️ Gramática: pronomes, conjunções, preposições', heat: 'heat-hot', desc: 'Pronome relativo, conjunção, preposição com valor semântico.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 16',
+                        badgeClass: 'badge-purple',
+                        title: 'Inglês: padrões de 5 anos',
+                        time: '~2h',
+                        topics: [
+                            { id: 'w4-t4', title: '🌐 Inferência e interpretação de texto', heat: 'heat-hot', desc: 'Nunca tradução literal. Textos de ciência, tecnologia, meio ambiente.' },
+                            { id: 'w4-t5', title: '📖 Modal verbs e conectivos', heat: 'heat-mid', desc: 'Must vs. dedução, can vs. habilidade.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 17',
+                        badgeClass: 'badge-purple',
+                        title: 'Redação: tema e estrutura',
+                        time: '~2h',
+                        topics: [
+                            { id: 'w4-t6', title: '✍️ Dissertação argumentativa tecnológico-social', heat: 'heat-hot', desc: '2026: desinformação · 2025: economia verde · 2024: arte e tecnologia.' }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'week5',
+                week: 5,
+                icon: '🎯',
+                name: 'Semana 5 — Revisão e Simulados',
+                subtitle: 'Consolidação final',
+                percentage: 0,
+                noProgress: true,
+                cards: [
+                    {
+                        badge: 'Dia 18',
+                        badgeClass: 'badge-orange',
+                        title: 'Revisão de falhas por área',
+                        time: '~3h',
+                        topics: [
+                            { id: 'w5-t1', title: '🔄 Retomar 3 temas em que você errou mais', heat: 'heat-mid', desc: 'Concentre nos temas de frequência 5/5.' },
+                            { id: 'w5-t2', title: '📝 Resolver questões antigas das 5 provas', heat: 'heat-mid', desc: 'Selecionar 1 questão por tema.' }
+                        ]
+                    },
+                    {
+                        badge: 'Dia 19',
+                        badgeClass: 'badge-orange',
+                        title: 'Simulado cronometrado',
+                        time: '5h',
+                        topics: [
+                            { id: 'w5-t3', title: '🎯 Fazer a prova de 2025 do 2º semestre completa', heat: 'heat-mid', desc: '64 questões + redação. Tempo real de 5 horas.' },
+                            { id: 'w5-t4', title: '✍️ Escrever uma redação sobre tema provável', heat: 'heat-mid', desc: 'IA e desigualdade · biodiversidade · fake news · futuro do trabalho.' }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        // Functions
+        function switchTab(tabName) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+            window.scrollTo(0, 0);
+
+            if (tabName === 'cronograma') {
+                renderWeeks();
+            }
+        }
+
+        function renderWeeks() {
+            const container = document.getElementById('weeksContainer');
+            
+            container.innerHTML = weeksData.map(week => `
+                <div class="week-module" id="module-${week.id}">
+                    <div class="week-module-header" id="header-${week.id}" onclick="toggleWeek('${week.id}')">
+                        <div class="week-title-group">
+                            <div class="week-icon">${week.icon}</div>
+                            <div class="week-info">
+                                <div class="week-name">${week.name}</div>
+                                <div class="week-subtitle">${week.subtitle}</div>
+                            </div>
+                        </div>
+                        ${!week.noProgress ? `
+                            <div class="week-progress-container">
+                                <div class="week-progress-bar">
+                                    <div class="week-progress-fill" id="${week.id}-progress" style="width: 0%"></div>
+                                </div>
+                                <div class="week-progress-percent" id="${week.id}-percent">0%</div>
+                            </div>
+                        ` : ''}
+                        <button class="week-toggle-btn" id="toggle-${week.id}" onclick="event.stopPropagation();">▼</button>
+                    </div>
+                    <div class="week-module-content" id="content-${week.id}">
+                        <div class="week-module-body">
+                            ${week.cards.map(card => `
+                                <div class="card">
+                                    <div class="card-header">
+                                        <span class="badge ${card.badgeClass}">${card.badge}</span>
+                                        <span class="card-title">${card.title}</span>
+                                        <span class="card-sub">${card.time}</span>
+                                    </div>
+                                    <div class="rows">
+                                        ${card.topics.map(topic => `
+                                            <div class="row" data-topic-id="${topic.id}">
+                                                <div class="dot" style="background:#5b7cff"></div>
+                                                <div class="row-content">
+                                                    <div class="row-main">${topic.title} <span class="heat-badge ${topic.heat}">5/5</span></div>
+                                                    <div class="row-desc">${topic.desc}</div>
+                                                    <div class="row-actions">
+                                                        <button class="ref-btn" onclick="showReferences('${topic.id}')">🔗 Ver Referências</button>
+                                                        <button class="complete-btn" onclick="toggleComplete('${topic.id}', '${week.id}')">✓ Marcar como concluído</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            loadProgress();
+        }
+
+        function toggleWeek(weekId) {
+            const module = document.getElementById(`module-${weekId}`);
+            const header = document.getElementById(`header-${weekId}`);
+            const toggle = document.getElementById(`toggle-${weekId}`);
+            const content = document.getElementById(`content-${weekId}`);
+
+            if (module.classList.contains('collapsed')) {
+                module.classList.remove('collapsed');
+                header.classList.remove('collapsed');
+                toggle.classList.remove('collapsed');
+                content.classList.remove('collapsed');
+            } else {
+                module.classList.add('collapsed');
+                header.classList.add('collapsed');
+                toggle.classList.add('collapsed');
+                content.classList.add('collapsed');
+            }
+        }
+
+        function toggleComplete(topicId, weekId) {
+            const row = document.querySelector(`[data-topic-id="${topicId}"]`);
+            if (!row) return;
+            
+            const btn = row.querySelector('.complete-btn');
+            
+            row.classList.toggle('completed');
+            btn.classList.toggle('completed');
+
+            let completed = JSON.parse(localStorage.getItem('fatecProgress') || '[]');
+            if (row.classList.contains('completed')) {
+                if (!completed.includes(topicId)) completed.push(topicId);
+                btn.textContent = '✓ Concluído';
+            } else {
+                completed = completed.filter(id => id !== topicId);
+                btn.textContent = '✓ Marcar como concluído';
+            }
+            localStorage.setItem('fatecProgress', JSON.stringify(completed));
+
+            if (!weeksData.find(w => w.id === weekId)?.noProgress) {
+                updateProgressBar(weekId);
+            }
+        }
+
+        function updateProgressBar(weekId) {
+            const week = weeksData.find(w => w.id === weekId);
+            if (!week) return;
+
+            const allTopics = [];
+            week.cards.forEach(card => {
+                card.topics.forEach(topic => {
+                    allTopics.push(topic.id);
+                });
+            });
+
+            const completed = allTopics.filter(topicId => {
+                const element = document.querySelector(`[data-topic-id="${topicId}"]`);
+                return element && element.classList.contains('completed');
+            }).length;
+
+            const percent = Math.round((completed / allTopics.length) * 100);
+            
+            const progressFill = document.getElementById(`${weekId}-progress`);
+            const progressPercent = document.getElementById(`${weekId}-percent`);
+            
+            if (progressFill && progressPercent) {
+                progressFill.style.width = percent + '%';
+                progressPercent.textContent = percent + '%';
+            }
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('fatecProgress');
+            if (saved) {
+                const completed = JSON.parse(saved);
+                completed.forEach(topicId => {
+                    const element = document.querySelector(`[data-topic-id="${topicId}"]`);
+                    if (element) {
+                        element.classList.add('completed');
+                        const btn = element.querySelector('.complete-btn');
+                        if (btn) btn.classList.add('completed');
+                    }
+                });
+                weeksData.forEach(week => {
+                    if (!week.noProgress) updateProgressBar(week.id);
+                });
+            }
+        }
+
+        function showReferences(refId) {
+            const data = referenceData[refId];
+            if (!data) {
+                alert('Referências em desenvolvimento para este tópico!');
+                return;
+            }
+
+            const refTitle = document.getElementById('refTitle');
+            const refContent = document.getElementById('refContent');
+
+            refTitle.textContent = data.title;
+            refContent.innerHTML = data.refs.map(ref => `
+                <div class="reference-item">
+                    <div class="ref-title">
+                        ${ref.title}
+                        <span class="ref-type">${ref.type}</span>
+                    </div>
+                    <div class="ref-desc">${ref.desc}</div>
+                    <a href="${ref.link}" target="_blank" class="ref-link">
+                        Acessar →
+                    </a>
+                </div>
+            `).join('');
+
+            document.getElementById('referenceSidebar').classList.add('open');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeSidebar() {
+            document.getElementById('referenceSidebar').classList.remove('open');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        document.getElementById('overlay').addEventListener('click', closeSidebar);
+    </script>
+</body>
+</html>

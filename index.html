@@ -1,1065 +1,1498 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-684P5LSSEG');
-</script>
-
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cronograma FATEC Otimizado 2026-2027</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Estudos FATEC 2022–2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ─────────────────────────────────────────── */
-:root{
-  --bg:#ffffff; --bg2:#f5f4f0; --bg3:#ebebea;
-  --tx:#1a1a18; --tx2:#5f5e5a; --tx3:#888780;
-  --bd:rgba(0,0,0,0.13); --bd2:rgba(0,0,0,0.25);
-  --r:8px; --rl:12px;
-  --blue:#185FA5; --blue-bg:#E6F1FB; --blue-tx:#0C447C;
-  --green:#0F6E56; --green-bg:#E1F5EE; --green-tx:#085041;
-  --amber:#854F0B; --amber-bg:#FAEEDA; --amber-tx:#633806;
-  --red:#A32D2D; --red-bg:#FCEBEB; --red-tx:#791F1F;
-  --purple:#534AB7; --purple-bg:#EEEDFE; --purple-tx:#3C3489;
-  --teal:#1D9E75; --teal-bg:#E1F5EE; --teal-tx:#085041;
-}
-@media(prefers-color-scheme:dark){
-  :root{
-    --bg:#1a1a18; --bg2:#242422; --bg3:#2e2e2b;
-    --tx:#f0efe8; --tx2:#b4b2a9; --tx3:#888780;
-    --bd:rgba(255,255,255,0.13); --bd2:rgba(255,255,255,0.28);
-    --blue-bg:#042C53; --blue-tx:#85B7EB;
-    --green-bg:#04342C; --green-tx:#5DCAA5;
-    --amber-bg:#412402; --amber-tx:#EF9F27;
-    --red-bg:#501313; --red-tx:#F09595;
-    --purple-bg:#26215C; --purple-tx:#AFA9EC;
-    --teal-bg:#04342C; --teal-tx:#5DCAA5;
+  :root {
+    --bg: #0b0e14;
+    --surface: #13181f;
+    --surface2: #1a2030;
+    --accent: #00e5a0;
+    --accent2: #ff6b35;
+    --accent3: #7c6fff;
+    --accent4: #ffd166;
+    --text: #e8edf5;
+    --text-muted: #7a8799;
+    --border: rgba(255,255,255,0.07);
+    --red: #ff4d6d;
+    --green: #00e5a0;
+    --yellow: #ffd166;
+    --blue: #4fc3f7;
   }
-}
 
-/* ── RESET & BASE ───────────────────────────────────── */
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  background:var(--bg);color:var(--tx);font-size:15px;line-height:1.65}
-a{color:var(--blue)}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ── LAYOUT ─────────────────────────────────────────── */
-.wrap{max-width:900px;margin:0 auto;padding:2rem 1.25rem 5rem}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-/* ── PAGE HEADER ────────────────────────────────────── */
-.ph{margin-bottom:2rem}
-.ph h1{font-size:22px;font-weight:500;color:var(--tx)}
-.ph p{font-size:13px;color:var(--tx2);margin-top:4px}
-.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:.85rem}
-.pill{font-size:11px;padding:3px 10px;border-radius:20px;
-  background:var(--bg2);color:var(--tx2);border:0.5px solid var(--bd)}
+  /* ─── HERO ─────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,229,160,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(124,111,255,0.1) 0%, transparent 60%),
+      var(--bg);
+    overflow: hidden;
+  }
 
-/* ── TABS ───────────────────────────────────────────── */
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.5rem}
-.tab{padding:6px 14px;border-radius:var(--r);border:0.5px solid var(--bd2);
-  font-size:13px;cursor:pointer;background:transparent;color:var(--tx2);
-  transition:all .15s;font-family:inherit}
-.tab:hover{background:var(--bg2)}
-.tab.active{background:var(--bg2);color:var(--tx);font-weight:500}
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,229,160,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,160,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
 
-/* ── PANELS ─────────────────────────────────────────── */
-.panel{display:none}
-.panel.on{display:block}
+  .hero-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0,229,160,0.1);
+    border: 1px solid rgba(0,229,160,0.25);
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 1.8rem;
+    display: inline-block;
+  }
 
-/* ── SECTION TITLE ──────────────────────────────────── */
-.sec{font-size:11px;font-weight:500;color:var(--tx3);letter-spacing:.06em;
-  text-transform:uppercase;margin-bottom:.75rem;padding-bottom:.5rem;
-  border-bottom:0.5px solid var(--bd)}
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 12vw, 9rem);
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
 
-/* ── CARDS ──────────────────────────────────────────── */
-.card{background:var(--bg);border:0.5px solid var(--bd);
-  border-radius:var(--rl);padding:1rem 1.25rem;margin-bottom:.75rem}
-.cardsm{background:var(--bg2);border-radius:var(--r);
-  padding:.75rem 1rem;margin-bottom:.5rem}
+  .hero h1 span { color: var(--accent); }
 
-/* ── METRIC CARDS ───────────────────────────────────── */
-.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
-  gap:10px;margin-bottom:1.5rem}
-.mc{background:var(--bg2);border-radius:var(--r);padding:.75rem 1rem}
-.mc-l{font-size:11px;color:var(--tx2);margin-bottom:4px}
-.mc-v{font-size:22px;font-weight:500;color:var(--tx)}
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 1rem auto 2.5rem;
+  }
 
-/* ── DAY HEADER ─────────────────────────────────────── */
-.dh{display:flex;align-items:center;gap:10px;margin-bottom:.85rem;flex-wrap:wrap}
-.dbadge{font-size:11px;font-weight:500;padding:4px 12px;border-radius:var(--r)}
-.dtitle{font-size:15px;font-weight:500;color:var(--tx)}
-.dsub{font-size:12px;color:var(--tx2);margin-left:auto}
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
 
-/* ── ROWS ───────────────────────────────────────────── */
-.rows{display:flex;flex-direction:column}
-.row{display:flex;gap:10px;align-items:flex-start;
-  padding:8px 0;border-bottom:0.5px solid var(--bd)}
-.row:last-child{border-bottom:none;padding-bottom:0}
-.dot{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
-.rt{font-size:13px;color:var(--tx);font-weight:500}
-.rd{font-size:12px;color:var(--tx2);margin-top:3px;line-height:1.5}
+  .hero-stat {
+    text-align: center;
+  }
 
-/* ── BADGES ─────────────────────────────────────────── */
-.badge{font-size:10px;font-weight:500;padding:2px 7px;
-  border-radius:20px;display:inline-block;margin-left:4px;vertical-align:middle}
-.b-red{background:var(--red-bg);color:var(--red-tx)}
-.b-amber{background:var(--amber-bg);color:var(--amber-tx)}
-.b-green{background:var(--green-bg);color:var(--green-tx)}
-.b-blue{background:var(--blue-bg);color:var(--blue-tx)}
-.b-purple{background:var(--purple-bg);color:var(--purple-tx)}
+  .hero-stat .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--accent);
+    line-height: 1;
+  }
 
-/* ── TÓPICO BLOCK ───────────────────────────────────── */
-.tp{border-left:3px solid var(--bd2);padding-left:1rem;margin:.75rem 0}
-.tp-t{font-size:13px;font-weight:500;color:var(--tx);margin-bottom:4px}
-.tp-d{font-size:12px;color:var(--tx2);line-height:1.55}
-.tp-m{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-.tag{font-size:11px;padding:2px 8px;border-radius:20px;
-  background:var(--bg2);color:var(--tx2);border:0.5px solid var(--bd)}
+  .hero-stat .lbl {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 0.3rem;
+  }
 
-/* ── CALLOUTS ───────────────────────────────────────── */
-.tip{background:var(--bg2);border-left:3px solid #378ADD;
-  border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem;
-  font-size:13px;color:var(--tx);margin:1rem 0;line-height:1.6}
-.tip strong,.warn strong,.ok strong{font-weight:500}
-.warn{background:var(--amber-bg);border-left:3px solid #BA7517;
-  border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem;
-  font-size:13px;color:var(--tx);margin:1rem 0;line-height:1.6}
-.ok{background:var(--green-bg);border-left:3px solid #1D9E75;
-  border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem;
-  font-size:13px;color:var(--tx);margin:1rem 0;line-height:1.6}
-.alert{background:var(--red-bg);border-left:3px solid var(--red);
-  border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem;
-  font-size:13px;color:var(--tx);margin:1rem 0;line-height:1.6}
+  /* ─── NAV ─────────────────────────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,14,20,0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
 
-/* ── PROGRESS BARS ──────────────────────────────────── */
-.bar-w{margin-bottom:.85rem}
-.bar-l{display:flex;justify-content:space-between;
-  font-size:12px;color:var(--tx2);margin-bottom:4px}
-.bar-t{height:7px;background:var(--bg2);border-radius:4px;overflow:hidden}
-.bar-f{height:100%;border-radius:4px}
+  nav::-webkit-scrollbar { display: none; }
 
-/* ── TRACKING TABLE ─────────────────────────────────── */
-.ttable{width:100%;border-collapse:collapse;font-size:12px;margin-top:.5rem}
-.ttable th{text-align:left;padding:6px 8px;font-size:11px;font-weight:500;
-  color:var(--tx3);border-bottom:0.5px solid var(--bd);
-  text-transform:uppercase;letter-spacing:.04em}
-.ttable td{padding:7px 8px;border-bottom:0.5px solid var(--bd);color:var(--tx)}
-.ttable tr:last-child td{border-bottom:none}
-.ttable tr:hover td{background:var(--bg2)}
-.cb{width:15px;height:15px;border:1.5px solid var(--bd2);
-  border-radius:3px;display:inline-block;cursor:pointer;
-  vertical-align:middle;transition:all .15s}
-.cb.done{background:#1D9E75;border-color:#1D9E75}
+  nav a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
 
-/* ── CHECKLIST ──────────────────────────────────────── */
-.cklist{list-style:none;font-size:13px}
-.cklist li{padding:5px 0;border-bottom:0.5px solid var(--bd);
-  display:flex;align-items:flex-start;gap:8px}
-.cklist li:last-child{border-bottom:none}
-.cklist li::before{content:'';display:inline-block;width:13px;height:13px;
-  border:1.5px solid var(--bd2);border-radius:3px;margin-top:3px;flex-shrink:0}
+  nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-/* ── EIXO BLOCK ─────────────────────────────────────── */
-.eixo{border:0.5px solid var(--bd);border-radius:var(--rl);
-  padding:1rem 1.25rem;margin-bottom:.75rem}
-.eixo-t{font-size:14px;font-weight:500;color:var(--tx);margin-bottom:.6rem}
-.eixo-c{font-size:12px;color:var(--tx2);line-height:1.8}
-.eixo-c span{display:inline-block;padding:2px 8px;border-radius:20px;
-  font-size:11px;margin:2px}
+  /* ─── SECTIONS ─────────────────────────── */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
 
-/* ── MATRIX TABLE ───────────────────────────────────── */
-.mtable{width:100%;border-collapse:collapse;font-size:12px}
-.mtable th,.mtable td{padding:7px 10px;border:0.5px solid var(--bd);text-align:center}
-.mtable th{background:var(--bg2);font-weight:500;color:var(--tx2);font-size:11px}
-.mtable td:first-child{text-align:left;font-weight:500;color:var(--tx)}
-.c5{background:var(--red-bg);color:var(--red-tx);font-weight:500;font-size:11px}
-.c4{background:var(--amber-bg);color:var(--amber-tx);font-size:11px}
-.c3{background:var(--green-bg);color:var(--green-tx);font-size:11px}
-.c0{background:var(--bg2);color:var(--tx3);font-size:11px}
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
 
-/* ── POLEMIC CARD ───────────────────────────────────── */
-.polemic{background:var(--red-bg);border:0.5px solid rgba(163,45,45,.25);
-  border-radius:var(--rl);padding:1rem 1.25rem;margin-bottom:.75rem}
-.polemic-t{font-size:13px;font-weight:500;color:var(--red-tx);margin-bottom:.6rem}
-.polemic-b{font-size:12px;color:var(--tx2);line-height:1.6}
-.polemic-b strong{font-weight:500;color:var(--tx)}
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
 
-/* ── DAY STRATEGY STEP ──────────────────────────────── */
-.step{display:flex;gap:14px;align-items:flex-start;padding:8px 0;
-  border-bottom:0.5px solid var(--bd)}
-.step:last-child{border-bottom:none}
-.stepnum{font-size:18px;font-weight:500;color:var(--tx3);
-  min-width:28px;line-height:1.3}
-.step-body .st{font-size:13px;font-weight:500;color:var(--tx)}
-.step-body .sd{font-size:12px;color:var(--tx2);margin-top:3px;line-height:1.5}
+  .section-desc {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+  }
 
-/* ── REDAÇÃO ROW ────────────────────────────────────── */
-.red-block{border-left:3px solid var(--purple);padding-left:1rem;margin:.75rem 0}
-.red-t{font-size:13px;font-weight:500;color:var(--purple-tx)}
-.red-d{font-size:12px;color:var(--tx2);margin-top:3px;line-height:1.5}
+  /* ─── CARDS ─────────────────────────────── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.8rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
 
-/* ── ACCORDION DAY CARDS ─────────────────────────────────── */
-.card.collapsible>.dh{cursor:pointer;user-select:none;margin-bottom:0;padding-bottom:.75rem;position:relative}
-.card.collapsible>.dh::after{content:'';display:block;width:20px;height:20px;margin-left:auto;flex-shrink:0;background:var(--bg3);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888780' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-size:14px 14px;background-repeat:no-repeat;background-position:center;transition:transform .22s ease}
-.card.collapsible.open>.dh::after{transform:rotate(180deg)}
-.card-body{overflow:hidden;max-height:0;transition:max-height .35s ease,opacity .25s ease;opacity:0}
-.card.collapsible.open .card-body{max-height:9999px;opacity:1}
-.card.collapsible>.dh .dsub{margin-right:8px}
+  .card:hover {
+    border-color: rgba(0,229,160,0.3);
+    transform: translateY(-2px);
+  }
 
-/* ── TOPIC DONE BUTTON ───────────────────────────────────── */
-.tp{position:relative}
-.tp-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:4px}
-.tp-header .tp-t{margin-bottom:0;flex:1}
-.tp-done-btn{flex-shrink:0;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1.5px solid var(--bd2);background:transparent;color:var(--tx3);cursor:pointer;font-family:inherit;transition:all .15s;white-space:nowrap;margin-top:1px}
-.tp-done-btn:hover{background:var(--green-bg);border-color:#1D9E75;color:var(--green-tx)}
-.tp-done-btn.done{background:var(--green-bg);border-color:#1D9E75;color:var(--green-tx)}
-.tp.is-done{opacity:.55}
-.tp.is-done .tp-t{text-decoration:line-through;text-decoration-color:var(--tx3)}
+  /* ─── ETAPA 1 — MAPEAMENTO ─────────────── */
+  .years-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+  }
 
-/* ── RESPONSIVE ─────────────────────────────────────── */
-@media(max-width:600px){
-  .wrap{padding:1rem .85rem 4rem}
-  .tabs{gap:5px}
-  .tab{font-size:12px;padding:5px 10px}
-}
+  .year-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .year-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .year-card.y2023::before { background: var(--accent); }
+  .year-card.y2024::before { background: var(--accent3); }
+  .year-card.y2025::before { background: var(--accent2); }
+  .year-card.y2026::before { background: var(--accent4); }
+
+  .year-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .year-card.y2023 .year-title { color: var(--accent); }
+  .year-card.y2024 .year-title { color: var(--accent3); }
+  .year-card.y2025 .year-title { color: var(--accent2); }
+  .year-card.y2026 .year-title { color: var(--accent4); }
+
+  .year-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .subject-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+
+  .subject-row:last-child { border-bottom: none; }
+
+  .subject-name { color: var(--text); }
+
+  .subject-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-muted);
+  }
+
+  .diff-badge {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .diff-f { background: rgba(0,229,160,0.15); color: var(--green); }
+  .diff-m { background: rgba(255,209,102,0.15); color: var(--yellow); }
+  .diff-d { background: rgba(255,77,109,0.15); color: var(--red); }
+
+  /* ─── ETAPA 2 — PADRÕES ─────────────────── */
+  .patterns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  @media (max-width: 700px) { .patterns-grid { grid-template-columns: 1fr; } }
+
+  .pattern-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem;
+  }
+
+  .pattern-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dot-green { background: var(--green); }
+  .dot-yellow { background: var(--yellow); }
+  .dot-red { background: var(--red); }
+  .dot-blue { background: var(--blue); }
+  .dot-purple { background: var(--accent3); }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    padding: 0.28rem 0.7rem;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .tag-fixed { background: rgba(0,229,160,0.12); color: var(--green); border: 1px solid rgba(0,229,160,0.2); }
+  .tag-high  { background: rgba(79,195,247,0.12); color: var(--blue); border: 1px solid rgba(79,195,247,0.2); }
+  .tag-low   { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border); }
+  .tag-new   { background: rgba(255,107,53,0.12); color: var(--accent2); border: 1px solid rgba(255,107,53,0.2); }
+
+  /* ─── ETAPA 3 — RANKING ─────────────────── */
+  .ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .ranking-table th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ranking-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+
+  .ranking-table tr:last-child td { border-bottom: none; }
+
+  .ranking-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .rank-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    width: 2.5rem;
+  }
+
+  .rank-num.top3 { color: var(--accent); }
+
+  .freq-bar {
+    height: 6px;
+    background: var(--surface2);
+    border-radius: 999px;
+    width: 80px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  .freq-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+
+  .trend-up   { color: var(--green); font-size: 0.8rem; }
+  .trend-same { color: var(--yellow); font-size: 0.8rem; }
+  .trend-down { color: var(--text-muted); font-size: 0.8rem; }
+
+  /* ─── ETAPA 4 — CRONOGRAMA ──────────────── */
+  .weeks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .phase-header:first-child { margin-top: 0; }
+
+  .phase-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--border);
+    width: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .phase-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.06em;
+  }
+
+  .phase-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .week-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .week-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    gap: 1rem;
+  }
+
+  .week-header:hover { background: rgba(255,255,255,0.02); }
+
+  .week-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    min-width: 4.5rem;
+  }
+
+  .week-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .week-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .week-tag {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+  }
+
+  .wt-base { background: rgba(0,229,160,0.12); color: var(--green); }
+  .wt-mid  { background: rgba(79,195,247,0.12); color: var(--blue); }
+  .wt-adv  { background: rgba(124,111,255,0.12); color: var(--accent3); }
+  .wt-rev  { background: rgba(255,209,102,0.12); color: var(--yellow); }
+  .wt-sim  { background: rgba(255,107,53,0.12); color: var(--accent2); }
+
+  .chevron {
+    color: var(--text-muted);
+    transition: transform 0.25s;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .week-body {
+    display: none;
+    padding: 1.2rem 1.4rem 1.4rem;
+  }
+
+  .week-body.open { display: block; }
+  .week-header.open .chevron { transform: rotate(180deg); }
+
+  .goal-box {
+    background: rgba(0,229,160,0.06);
+    border: 1px solid rgba(0,229,160,0.15);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+    color: var(--green);
+  }
+
+  .goal-box strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 0.2rem;
+    color: rgba(0,229,160,0.6);
+  }
+
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+
+  .day-box {
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 0.9rem;
+  }
+
+  .day-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .day-subject {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .day-detail {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .day-rest {
+    opacity: 0.4;
+    font-style: italic;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .simulado-box {
+    margin-top: 1rem;
+    background: rgba(255,107,53,0.06);
+    border: 1px solid rgba(255,107,53,0.2);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 0.82rem;
+    color: var(--accent2);
+  }
+
+  .simulado-box strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 0.2rem;
+    color: rgba(255,107,53,0.6);
+  }
+
+  /* ─── ETAPA 5 — DICAS ─────────────────── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 700px) { .tips-grid { grid-template-columns: 1fr; } }
+
+  .tip-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem;
+  }
+
+  .tip-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tip-item {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .tip-item:last-child { border-bottom: none; }
+
+  .tip-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  /* ─── FOOTER ─────────────────────────── */
+  footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ─── SCROLL REVEAL ──────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ─── PROGRESS BAR ─────────────────────── */
+  #progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--accent);
+    z-index: 200;
+    transition: width 0.1s;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────── */
+  @media (max-width: 640px) {
+    .years-grid { grid-template-columns: 1fr; }
+    .week-header { flex-wrap: wrap; }
+    .week-meta { display: none; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-<!-- PAGE HEADER -->
-<div class="ph">
-<h1>Cronograma Fatecs</h1>
-<p>Provas analisadas de (2022–2026) para criação desse Cronograma, os temas abordados se fazem presente em todas as provas</p>
 
-</div>
-<!-- TABS -->
-<div class="tabs">
-<button class="tab active" onclick="go('s1')">Português
-</button>
-<button class="tab" onclick="go('s2')">Inglês + Mat.</button>
-<button class="tab" onclick="go('s3')">Ciências</button>
-<button class="tab" onclick="go('s4')">Humanas</button>
-<button class="tab" onclick="go('s5')">Simulados</button>
-<button class="tab" onclick="go('eixos')">Eixos</button>
-<button class="tab" onclick="go('polemicos')">Temas polêmicos</button>
-<button class="tab" onclick="go('dayd')">Dia da prova</button>
-<button class="tab" onclick="go('resumo')">Resumo</button>
-</div>
+<div id="progress-bar"></div>
 
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 2 — SEMANA 1: PORTUGUÊS + INTERPRETAÇÃO
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel on" id="s1">
-<div class="sec">Semana 1 — Português + Interpretação (10h estudo + 1.5h redação)</div>
-<div class="grid4">
-<div class="mc"><div class="mc-l">Foco</div><div class="mc-v" style="font-size:16px">Português</div></div>
-<div class="mc"><div class="mc-l">Total de horas</div><div class="mc-v">11.5h</div></div>
-<div class="mc"><div class="mc-l">Questões práticas</div><div class="mc-v">~38</div></div>
-<div class="mc"><div class="mc-l">Redações</div><div class="mc-v">1 completa</div></div>
-</div>
-<!-- DIA 1 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-purple">Dia 1</span>
-<span class="dtitle">Figuras de linguagem (3h)</span>
-<span class="dsub">+ 30 min leitura redação modelo</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 1 — Ironia, metáfora e personificação (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">As três figuras mais cobradas na FATEC — aparecem em toda prova. Praticar com as charges e tirinhas reais das provas 2023–2026. Estratégia: identificar pelo efeito ("o que essa palavra faz com o sentido do texto?"), não pela definição decorada.</div>
-<div class="tp-m"><span class="tag">5 questões — charges das provas 2024–2026</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 2 — Catacrese, eufemismo, hipérbole, antítese, anáfora (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Foco em figuras que aparecem em textos informativos e científicos, não só literários. A FATEC usa esses recursos em memes, tirinhas e notícias — o contexto é sempre tecnológico ou socioambiental.</div>
-<div class="tp-m"><span class="tag">5 questões — provas 2022–2026</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 3 — Gêneros textuais: charge, cartum, tirinha, meme, infográfico (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Identificar o gênero e sua função discursiva: criticar, informar, persuadir ou ironizar. A FATEC sempre inclui questão sobre função do gênero — nunca sobre forma. Praticar com Q50 da prova 2025 e Q52 da prova 2026.</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="red-block">
-<div class="red-t">Leitura ativa — redação modelo (30 min)</div>
-<div class="red-d">Ler a proposta de redação da prova 2026. Marcar: onde está o dado concreto? Qual é a tese? A conclusão tem proposta específica? Esse hábito de análise cria repertório estrutural sem pressão de escrever.</div>
-</div>
-</div></div>
-<!-- DIA 2 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-purple">Dia 2</span>
-<span class="dtitle">Gramática contextualizada (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 1 — Pronomes: relativo, reflexivo, demonstrativo (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Foco em "que" como pronome relativo: identificar o antecedente. A FATEC testa Q02 da prova 2025: "o pronome presente em 'restaurá-la' retoma qual termo?" — identificar o referente no contexto do parágrafo.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 2 — Conjunções e seu valor semântico (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">"Portanto" = conclusão. "Embora" = concessão. "Uma vez que" = causa. A FATEC pede substituição mantendo o sentido — ex.: "visando reforçar" → "a fim de que seja reforçada". Praticar com Q57 da prova 2026 e Q28 da prova 2023.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 3 — Preposições com valor semântico + morfologia (prefixos) (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">"Com terra e cinzas" = instrumento. "Com outros artistas" = companhia. "Des-" em "despreparado" = negação/privação — aparece também em "desabrigo". Q24 e Q51 das provas 2024 e 2026.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 2:</strong> resolver 10 questões de português das provas reais. Meta ≥70%. Se &lt;70%: repetir o tópico mais fraco antes de avançar ao Dia 3.</div>
-</div></div>
-<!-- DIA 3 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-purple">Dia 3</span>
-<span class="dtitle">Interpretação de texto (2h) + LIVRE</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 1 — Textos expositivos e argumentativos (90 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Praticar com textos científicos das provas: pesquisa OCDE, Banco Mundial, IBGE, Milton Santos. Estratégia em 4 passos: (1) ler completo uma vez; (2) reler 1º e último parágrafo; (3) responder sem voltar ao texto; (4) confirmar com o texto apenas quando em dúvida.</div>
-<div class="tp-m"><span class="tag">6 questões — provas 2024–2026</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 2 — Paráfrase e substituição sem prejuízo de sentido (30 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Q12 da prova 2023 (Milton Santos) + Q57 da prova 2026. Treinar identificar qual elemento muda (tempo verbal, modo, estrutura) e qual permanece (sentido lógico da oração).</div>
-<div class="tp-m"><span class="tag">3 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tip">Dia 3 é de estudo mais leve — 2h de conteúdo e o resto livre. A saúde mental é parte estrutural do plano, não um bônus.</div>
-</div></div>
-<!-- DIA 4 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 4</span>
-<span class="dtitle">DESCANSO — dia completamente livre</span>
-</div><div class="card-body">
-<div class="ok"><strong>Dia livre.</strong> Sem metas, sem questões, sem cronômetro. Se sentir vontade, leia um artigo de ciência ou tecnologia que achar interessante — isso constrói repertório para a redação de forma natural e sem pressão.</div>
-</div></div>
-<!-- DIA 5 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-purple">Dia 5</span>
-<span class="dtitle">Revisão + 1ª redação completa (3.5h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#534AB7"><div class="tp-header"><div class="tp-t">Tópico 1 — Revisão ativa das figuras e gramática (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Revisão em modo "flashcard mental": para cada figura, criar um exemplo com tema tecnológico (ex.: "A IA é o novo oráculo" = metáfora). Para cada conjunção, criar a substituição equivalente. 5 questões mistas.</div>
-<div class="tp-m"><span class="tag">5 questões mistas</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="red-block">
-<div class="red-t">1ª REDAÇÃO COMPLETA — 1h30 (Redação nº 1 de 10)</div>
-<div class="red-d">Tema: "Como a tecnologia pode combater a desinformação e disseminar o conhecimento científico?" — tema real da prova FATEC 2026. Escrever à mão, de 25 a 30 linhas. Usar o checklist abaixo para autocorreção após concluir.</div>
-</div>
-<div class="cardsm" style="margin-top:.75rem">
-<div style="font-size:12px;font-weight:500;color:var(--tx);margin-bottom:8px">Checklist FATEC — autocorreção obrigatória após cada redação</div>
-<ul class="cklist">
-<li>O título é criativo e específico (não genérico como "A tecnologia")?</li>
-<li>A introdução contextualiza com dado, fato ou referência concreta?</li>
-<li>A tese está clara no final da introdução?</li>
-<li>O 1º parágrafo tem tópico frasal + desenvolvimento + exemplo real?</li>
-<li>O 2º parágrafo aprofunda ou apresenta e refuta um contraponto?</li>
-<li>A conclusão indica QUEM age, COMO e com QUAL finalidade (3–4 linhas)?</li>
-<li>Nenhuma frase copiada literalmente dos textos da coletânea?</li>
-<li>Norma culta: sem gírias, abreviações ou linguagem coloquial?</li>
-<li>A Folha de Redação NÃO foi assinada nem identificada?</li>
-</ul>
-</div>
-<div class="warn"><strong>Checkpoint Dia 5:</strong> 10 questões mistas de português + autocorreção da redação com o checklist. Se a conclusão não tiver proposta específica, reescrever apenas a conclusão antes da Semana 2.</div>
-</div></div>
-</div><!-- /s1 -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 3 — SEMANA 2: INGLÊS + MATEMÁTICA
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="s2">
-<div class="sec">Semana 2 — Inglês + Matemática (11h estudo + 1.5h redação)</div>
-<div class="grid4">
-<div class="mc"><div class="mc-l">Foco</div><div class="mc-v" style="font-size:16px">Inglês + Mat.</div></div>
-<div class="mc"><div class="mc-l">Total de horas</div><div class="mc-v">12.5h</div></div>
-<div class="mc"><div class="mc-l">Questões práticas</div><div class="mc-v">~42</div></div>
-<div class="mc"><div class="mc-l">Redações</div><div class="mc-v">1 completa</div></div>
-</div>
-<!-- DIA 6 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-blue">Dia 6</span>
-<span class="dtitle">Inglês — leitura por contexto e vocabulário (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 1 — Estratégia de leitura sem tradução (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">A FATEC nunca pede tradução. Pede: "o texto afirma que…", "a expressão X equivale a…". Técnica: (1) ler título e subtítulo; (2) identificar o tema pelo 1º e último parágrafo; (3) responder usando contexto + cognatos. Praticar com os textos em inglês das provas 2023–2026 (AI carbon footprint, Blood Falls, food miles).</div>
-<div class="tp-m"><span class="tag">6 questões — textos científicos das provas</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 2 — Modal verbs: must, can, could, should, may (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">"Must" = dedução (This must be a salt-water pool) ≠ obrigação (You must leave). "Can" = habilidade ≠ permissão. A questão sempre pede identificar o uso pelo contexto — Q26 da prova 2026 é o modelo perfeito para treinar.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 3 — Conectivos + grau dos adjetivos + substituição (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">"due to" = causa · "however" = contraste · "in fact" = ênfase · "therefore" = conclusão. Comparativos: "bigger than", "as much as", "the most". Substituição: "plenty of" → "many" (Q45, prova 2023). Antônimos: "dip" ≠ "spike" (Q25, prova 2023).</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 6:</strong> 10 questões de inglês das provas reais. Meta ≥70%. Se &lt;70% em inferência: praticar mais 5 textos antes de avançar para matemática.</div>
-</div></div>
-<!-- DIA 7 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-blue">Dia 7</span>
-<span class="dtitle">Matemática — funções aplicadas (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 1 — Função quadrática: vértice, máximo, mínimo (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">A FATEC usa função quadrática para modelar fenômenos físicos e energéticos. P(v) = −5v²+160v−470 (potência de aerogerador, Q14/2025). Identificar máximo = substituir valor ou aplicar xv = −b/2a. Nunca há cálculo puro — sempre tem texto de contexto.</div>
-<div class="tp-m"><span class="tag">Q14 da prova 2025</span><span class="tag">Q52 da prova 2025</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 2 — Função exponencial e logarítmica (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">N(t) = 70·2^(t−2016) para veículos elétricos (Q35/2025). pH = −log[H⁺] com log 2 = 0,3 dado na questão (Q34/2026). N(t) = 1000·2^(t/g) para bactérias (Q36/2026). A FATEC sempre fornece os dados — o desafio é identificar qual variável substituir.</div>
-<div class="tp-m"><span class="tag">Q34, Q36 da prova 2026</span><span class="tag">Q35 da prova 2025</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 3 — Função trigonométrica e função afim (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">h(t) = 51−40cos(πt/15) — altura em roda-gigante (Q33/2026): máximo quando cos = −1, mínimo quando cos = 1. Função afim: y = 4,60+1,10x para entregador (Q34/2023) — coeficiente angular = ganho por km.</div>
-<div class="tp-m"><span class="tag">Q33 da prova 2026</span><span class="tag">Q34 da prova 2023</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-</div></div>
-<!-- DIA 8 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-blue">Dia 8</span>
-<span class="dtitle">Matemática — combinatória, matrizes, lógica e estatística (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 1 — Combinatória com restrição + PA/PG (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Placas Mercosul só com vogais: 5(L1)×5(L2)×5(L3)×5(N1)×10(N2) = 125.000 (Q31/2026). PA: a_n = a₁+(n−1)r — Q35/2026 (cabos de internet). Sequências cíclicas: Q48/2026 (posição na repetição do Tema 4).</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 2 — Matrizes + probabilidade + estatística (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Leitura de m_ij: linha i, coluna j. Filtro de imagem = multiplicar cada elemento por ½ (Q37/2026). Probabilidade condicional: P(aderiu E não atingiu) = 60%×20% = 12% (Q34/2025 prova anterior). Moda e mediana: Q06/2024 (visitantes do Louvre).</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥70%</span></div>
-</div>
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 3 — Lógica dedutiva e raciocínio por eliminação (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Q50/2025 (filhas de Rose e Alfredo): premissas → dedução válida. Q51/2026 (Lake, Dumont, Tsiolkovsky): cruzar 3 clues para identificar a única resposta consistente. Estratégia: montar tabela de possibilidades em vez de testar alternativas.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥70%</span></div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 8:</strong> 10 questões mistas de matemática. Meta ≥70%. Se &lt;70% em funções: refazer Tópico 2 do Dia 7 antes da Semana 3.</div>
-</div></div>
-<!-- DIA 9 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 9</span>
-<span class="dtitle">DESCANSO — dia completamente livre</span>
-</div><div class="card-body">
-<div class="ok"><strong>Dia livre.</strong> Nenhuma atividade de estudo obrigatória. Opcional: assistir a um vídeo curto sobre IA, sustentabilidade ou automação — construção passiva de repertório para a redação.</div>
-</div></div>
-<!-- DIA 10 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-blue">Dia 10</span>
-<span class="dtitle">Geometria + revisão e 2ª redação (3.5h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#185FA5"><div class="tp-header"><div class="tp-t">Tópico 1 — Geometria plana e espacial + trigonometria (90 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">C = πd (Q32/2026). V = πr²h — piscinão: V = 200.000×5 = 1.000.000 m³ = 10⁹ litros (Q53/2025). Semelhança de sólidos: escala ao quadrado para áreas, ao cubo para volumes (Q14/2024). Trigonometria: h = d·senθ para drone (Q38/2026).</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="red-block">
-<div class="red-t">2ª REDAÇÃO COMPLETA — 1h30 (Redação nº 2 de 10)</div>
-<div class="red-d">Tema: "Como a tecnologia pode afetar o desenvolvimento de uma economia sustentável?" — tema real da prova FATEC 2025. Foco desta redação: usar pelo menos 1 dado numérico concreto em cada parágrafo de argumento. Comparar com a 1ª redação: o que melhorou na conclusão?</div>
-</div>
-</div></div>
-</div><!-- /s2 -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 4 — SEMANA 3: CIÊNCIAS
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="s3">
-<div class="sec">Semana 3 — Ciências: Química + Biologia + Física (10.5h estudo + 1.5h redação)</div>
-<div class="grid4">
-<div class="mc"><div class="mc-l">Foco</div><div class="mc-v" style="font-size:16px">Ciências</div></div>
-<div class="mc"><div class="mc-l">Total de horas</div><div class="mc-v">12h</div></div>
-<div class="mc"><div class="mc-l">Questões práticas</div><div class="mc-v">~48</div></div>
-<div class="mc"><div class="mc-l">Redações</div><div class="mc-v">1 completa</div></div>
-</div>
-<!-- DIA 11 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 11</span>
-<span class="dtitle">Química — reações, combustão e estequiometria (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 1 — Balanceamento de equações químicas (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">A FATEC apresenta o contexto (camiseta que captura CO₂, sabão na lavagem) e pede identificar a equação correta. Estratégia: (1) identificar reagentes e produtos no texto; (2) verificar balanço de átomos; (3) confirmar estados físicos. Q09 da prova 2025 é o modelo mais direto.</div>
-<div class="tp-m"><span class="tag">Q09 da prova 2025</span><span class="tag">Q13 da prova 2025</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 2 — Estequiometria com contexto ambiental (90 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Massa molar CO₂ = 44 g/mol. N_A = 6×10²³ /mol. Sempre fornecido na questão — não precisa memorizar. Q10/2025 (camiseta vs. árvore): 75×10²³ moléculas ÷ 6×10²³ = 12,5 mol × 44 g/mol = 550 g. Q55/2025 (biodiesel): 330×10⁶ t = 330×10¹² g.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span><span class="tag">Notação científica</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 3 — Separação de misturas no contexto tecnológico (30 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Separação magnética (nanoplásticos + nanopartículas magnéticas + ímã). Levigação (bateia no garimpo = diferença de densidade com água). Filtração vs. decantação. A chave: o que diferencia as substâncias? Q40/2026 (nanoplásticos), Q40/2024 (garimpo Yanomami).</div>
-<div class="tp-m"><span class="tag">Q40 da prova 2026</span><span class="tag">Q40 da prova 2024</span><span class="tag">Meta: 100%</span></div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 11:</strong> 10 questões de química das provas reais. Meta ≥70%. Se &lt;70% em estequiometria: revisar conversão mol↔grama antes de continuar.</div>
-</div></div>
-<!-- DIA 12 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 12</span>
-<span class="dtitle">Química — funções orgânicas, tabela periódica e equilíbrio (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 1 — Funções orgânicas: álcool, ácido, éster, aldeído (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">PET degrada em ácido tereftálico + etano-1,2-diol (álcool, pois tem −OH). PFAS = hidrogênios substituídos por flúor (mais eletronegativo). A FATEC mostra a fórmula estrutural e pede a função — identificar pelo grupo funcional: −COOH (ácido), −OH (álcool), −CHO (aldeído). Q44/2026, Q41/2026.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 2 — Tabela periódica: grupos, períodos e ligações (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">NaCl e KCl = ligação iônica (metal + não-metal). Platina (Pt) e Irídio (Ir) = metais de transição, mesmo período (6°). Neodímio é metal de transição interna (lantanídeo). Q40/2025 (catalisadores Pt e Ir), Q43/2026 (NaCl vs. KCl).</div>
-<div class="tp-m"><span class="tag">3 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 3 — Equilíbrio químico, catalisadores e entalpia (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Catalisador: reduz energia de ativação, não altera ΔH nem a posição do equilíbrio. Processo endotérmico: produtos em nível de energia mais alto que os reagentes. Lei de Hess: inverter uma equação = inverter o sinal de ΔH. Q41/2025 (gráfico energético com/sem catalisador), Q52/2023 (pirólise do metano pela Lei de Hess).</div>
-<div class="tp-m"><span class="tag">3 questões</span><span class="tag">Meta: ≥70%</span></div>
-</div>
-</div></div>
-<!-- DIA 13 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 13</span>
-<span class="dtitle">DESCANSO — dia completamente livre</span>
-</div><div class="card-body">
-<div class="ok"><strong>Dia livre.</strong> Se sentir vontade, assista a um documentário sobre biologia, biotecnologia ou meio ambiente. Construção passiva e prazerosa de repertório.</div>
-</div></div>
-<!-- DIA 14 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 14</span>
-<span class="dtitle">Biologia (2.5h) + 3ª redação (1.5h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 1 — Genética: tipos sanguíneos e heredograma (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">ABO: A = antígeno A + anti-B. O = sem antígeno (receptor universal). AB = sem anticorpo (doador universal de plasma). Heredograma: traçar dominância/recessividade geração por geração — Q03/2026 mostra como a FATEC testa isso com 3 gerações e pede identificar o padrão.</div>
-<div class="tp-m"><span class="tag">Q01, Q03 da prova 2026</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 2 — Doenças, transmissão e biotecnologia (90 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Leptospirose (urina de rato em água). Esquistossomose (larvas em água com caramujos). Ascaridíase (fecal-oral). DNA recombinante: inserir gene humano em bactéria (E. coli) → produção de insulina sintética. Soro = anticorpos prontos. Vacina = estimula produção de anticorpos. Q06/2026, Q14/2023, Q42/2025.</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="red-block">
-<div class="red-t">3ª REDAÇÃO COMPLETA — 1h30 (Redação nº 3 de 10)</div>
-<div class="red-d">Tema livre — escolher entre: "IA e desemprego tecnológico", "negacionismo científico e saúde pública" ou "bioeconomia e populações tradicionais". Foco desta redação: a conclusão deve ter exatamente 3 elementos — quem age, como age, com qual finalidade. Anotar no checklist.</div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 14:</strong> 10 questões mistas de ciências. Meta ≥70%. Anotar os temas específicos em que errou — são as prioridades da Semana 5.</div>
-</div></div>
-<!-- DIA 15 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 15</span>
-<span class="dtitle">Física — eletricidade, ondas e mecânica (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 1 — Eletricidade: P, V, I, energia (Wh e kWh) (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">P = V·I → I = P/V. Energia = P×t. Carga de bateria: 3000 mAh × 5V = 15 Wh (Q17/2025). IA Gen: 450 MWh/ano ÷ 50 kWh/hab = 9.000 hab (Q15/2025). Leitura de placa técnica: 127 V = tensão, 1270 W = potência, 60 Hz = frequência da rede elétrica (não rotação). Q07/2026.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 2 — Ondas: c = λf, espectro eletromagnético, NFC (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">c = 3×10⁸ m/s (sempre fornecido). λ = 1000 nm = 10⁻⁶ m → f = c/λ = 3×10¹⁴ Hz (Q10/2026). NFC: λ ≈ 22 m → f ≈ 3×10⁸/22 ≈ 13,6 MHz (Q33/2023). Infravermelho = comprimento maior que luz visível, menor que micro-ondas.</div>
-<div class="tp-m"><span class="tag">Q10 da prova 2026</span><span class="tag">Q32, Q33 da prova 2023</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#1D9E75"><div class="tp-header"><div class="tp-t">Tópico 3 — Mecânica: forças, energia elástica/cinética e trig. aplicada (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Lançamento parabólico: sem resistência do ar, força horizontal = 0 após lançamento (Q11/2026). Energia potencial elástica máxima quando E_cinética = 0 (corda bamba na deflexão máxima — Q45/2024). Trig. aplicada: h = 20·sen(θ) = 20×0,8 = 16 km para drone (Q38/2026).</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥70%</span></div>
-</div>
-</div></div>
-</div><!-- /s3 -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 5 — SEMANA 4: HUMANAS
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="s4">
-<div class="sec">Semana 4 — Humanas: História + Geografia + integração temática (9h + 1.5h redação)</div>
-<div class="grid4">
-<div class="mc"><div class="mc-l">Foco</div><div class="mc-v" style="font-size:16px">Humanas</div></div>
-<div class="mc"><div class="mc-l">Total de horas</div><div class="mc-v">10.5h</div></div>
-<div class="mc"><div class="mc-l">Questões práticas</div><div class="mc-v">~36</div></div>
-<div class="mc"><div class="mc-l">Redações</div><div class="mc-v">1 completa</div></div>
-</div>
-<!-- DIA 16 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-amber">Dia 16</span>
-<span class="dtitle">História — Revoluções Industriais, Brasil e ciência (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 1 — Revoluções Industriais (1ª, 2ª e 4ª) (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">1ª RI: Watt e o condensador (1760), carvão, Inglaterra — Q20/2026. 2ª RI: eletricidade, fordismo, Belle Époque — Q21/2026. 4ª RI: IA, dados, automação — tema da redação 2023. A FATEC conecta cada revolução ao impacto no trabalho e na sociedade: o que mudou para o trabalhador?</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 2 — Brasil: era colonial, escravidão, Era Vargas e café (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Tecnologias africanas: bateia (levigação), cadinho (fundição). Coivara indígena: técnica agrícola sustentável de baixo impacto. Era Vargas: CSN (siderurgia), CNPq (pesquisa), Proálcool (biocombustíveis). Vale do Paraíba → Oeste Paulista: esgotamento do solo + extinção do tráfico. Q39/2025, Q24/2026, Q53/2023.</div>
-<div class="tp-m"><span class="tag">5 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 3 — Guerra Fria, 2ª Guerra e história da ciência (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Guerra Fria: Plano Marshall (EUA → Europa) + OTAN (capitalistas) × Pacto de Varsóvia (socialistas). Canudos: Brasil República, resistência popular, Euclides da Cunha. História da ciência: Gutenberg (imprensa), Pasteur (fermentação = microbiana), Eratóstenes (circunferência da Terra com sombras). Q13/2026, Q48/2024.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 16:</strong> 10 questões de história. Meta ≥70%. Se &lt;70%: construir linha do tempo de 1700 a 2000 com os eventos cobrados pela FATEC antes de continuar.</div>
-</div></div>
-<!-- DIA 17 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-amber">Dia 17</span>
-<span class="dtitle">Geografia — clima, urbanização, sustentabilidade (3h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 1 — Clima, biomas, intemperismo e tipos de chuva (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Intemperismo físico = variação de temperatura/pressão → regiões áridas e polares. Químico = água líquida reage com a rocha → florestas tropicais e úmidas. Chuva orográfica = montanha força o ar a subir. Frontais = encontro de massas. Convectiva = calor do solo. Q14/2026, Q15/2026.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥80%</span></div>
-</div>
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 2 — Urbanização, demografía e mobilidade (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Favelas = estratégia autônoma da população (IBGE) → existência ligada à insuficiência de políticas públicas. Taxa de fecundidade em queda → crescimento vegetativo lento. Migração norte–sul: Q31/2024 (Belchior, "Fotografia 3×4"). Milton Santos: ciberespaço como objeto da geografia. Q16/2026, Q17/2026.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 3 — Geopolítica ambiental e globalização (60 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Amazônia em pé = US$ 317 bi/ano (Banco Mundial, Q38/2025). Pegada de carbono: 1 kg carne bovina = 99,5 kg CO₂eq (Q32/2025). CCS: captura CO₂ na fonte e armazena no subsolo (Q31/2025 em inglês). Globalização tecnológica: meios de comunicação + transporte integrando o espaço.</div>
-<div class="tp-m"><span class="tag">4 questões</span><span class="tag">Meta: ≥75%</span></div>
-</div>
-</div></div>
-<!-- DIA 18 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-green">Dia 18</span>
-<span class="dtitle">DESCANSO — dia completamente livre</span>
-</div><div class="card-body">
-<div class="ok"><strong>Dia livre.</strong> A semana 4 é a mais densa do plano. Descanso aqui é estratégico para a performance na Semana 5 (simulados).</div>
-</div></div>
-<!-- DIA 19 -->
-<div class="card collapsible">
-<div class="dh">
-<span class="dbadge b-amber">Dia 19</span>
-<span class="dtitle">Integração temática + 4ª redação (3.5h)</span>
-</div><div class="card-body">
-<div class="tp" style="border-color:#BA7517"><div class="tp-header"><div class="tp-t">Tópico 1 — Questões integradas sem rótulo de disciplina (90 min)</div><button class="tp-done-btn" onclick="toggleDone(this)">✓ Concluído</button></div>
-
-<div class="tp-d">Praticar 6 questões que cruzam disciplinas: Q58/2026 (gráfico de empregos em TI + escolaridade docente por região), Q22/2026 (Guerra Fria + tecnologia militar), Q05/2025 (Revolução Verde + biologia). Estratégia: ler como se fosse português → identificar o conceito pedido → aplicar o conhecimento específico.</div>
-<div class="tp-m"><span class="tag">6 questões integradas</span><span class="tag">Meta: ≥70%</span></div>
-</div>
-<div class="red-block">
-<div class="red-t">4ª REDAÇÃO COMPLETA — 1h30 (Redação nº 4 de 10)</div>
-<div class="red-d">Tema: "A importância da representatividade na Arte para a sociedade" — tema real das provas FATEC 2022 e 2024. Foco: usar pelo menos 2 referências distintas (ex.: pesquisa + exemplo histórico). Comparar com as 3 redações anteriores — anotar 1 ponto que melhorou e 1 que ainda precisa de atenção.</div>
-</div>
-<div class="warn"><strong>Checkpoint Dia 19:</strong> 10 questões integradas sem escolher disciplina antes de resolver. Meta ≥70%. Registrar na tabela de rastreamento quais áreas ainda precisam de reforço na Semana 5.</div>
-</div></div>
-</div><!-- /s4 -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 6 — SEMANA 5: SIMULADOS + REDAÇÃO INTENSIVA
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="s5">
-<div class="sec">Semana 5 — Simulados + revisão intensiva + redação (12h)</div>
-<div class="grid4">
-<div class="mc"><div class="mc-l">Simulados completos</div><div class="mc-v">2</div></div>
-<div class="mc"><div class="mc-l">Redações na semana</div><div class="mc-v">2</div></div>
-<div class="mc"><div class="mc-l">Horas de simulado</div><div class="mc-v">10h</div></div>
-<div class="mc"><div class="mc-l">Total na semana</div><div class="mc-v">12h</div></div>
-</div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Dia 20</span><span class="dtitle">Revisão dirigida dos pontos fracos (3h)</span></div><div class="card-body">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Revisar os 3 temas com menor acerto na tabela de rastreamento</div>
-<div class="rd">Usar exclusivamente questões das provas ainda não resolvidas. Não revisar tudo — apenas os temas em que o checkpoint ficou abaixo de 70%. Quantidade: 5 questões por tema.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#7F77DD"></div><div>
-<div class="rt">5ª Redação — tema polêmico — 1h30 (Redação nº 5 de 10)</div>
-<div class="rd">Tema: "Inteligência artificial e o futuro do emprego: oportunidade ou ameaça?" Foco: o 2º parágrafo deve apresentar um contraponto real e refutá-lo com um argumento embasado. Ver a aba Temas Polêmicos para dados.</div>
-</div></div>
-</div>
-</div></div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Dia 21</span><span class="dtitle">1º Simulado completo — condições reais (5h)</span></div><div class="card-body">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Usar a prova FATEC 1º semestre 2025 — a mais recente disponível</div>
-<div class="rd">Cronometrar 5h exatas. Sem consulta, sem pausa acima de 5 min. Começar às 13h se possível — mesmo horário do exame real. Ter caneta azul ou preta, caderno e folha de rascunho.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Ordem de resolução recomendada dentro do simulado</div>
-<div class="rd">Português e Inglês (1h) → Matemática (1h) → Ciências (1h) → Humanas (30 min) → Redação (1h30). Não começar pela disciplina mais difícil — construir confiança antes.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div>
-<div class="rt">Após o simulado: anotar % por área — não corrigir ainda</div>
-<div class="rd">Deixar a correção para o Dia 22. O objetivo hoje é simular a experiência real — fadiga, gestão de tempo e pressão incluídas.</div>
-</div></div>
-</div>
-</div></div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Dia 22</span><span class="dtitle">Correção do simulado + análise de erros (3h)</span></div><div class="card-body">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Corrigir e classificar cada erro: conceito, leitura ou cálculo</div>
-<div class="rd">Conceito = não sabia o conteúdo. Leitura = leu errado o enunciado. Cálculo = entendeu mas errou a conta. Cada tipo tem correção diferente. Meta por disciplina: ≥65%. Abaixo de 60% em qualquer área = prioridade máxima nos Dias 23–24.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#7F77DD"></div><div>
-<div class="rt">6ª Redação — reescrita da redação do simulado (1h30 — Redação nº 6)</div>
-<div class="rd">Não fazer nova redação — reescrever a do simulado com as melhorias identificadas. Foco: tornar a conclusão mais específica e garantir que cada parágrafo tenha tópico frasal + exemplo + conexão com a tese.</div>
-</div></div>
-</div>
-</div></div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-green">Dia 23</span><span class="dtitle">DESCANSO após simulado</span></div><div class="card-body">
-<div class="ok"><strong>Descanso obrigatório após o simulado.</strong> Opcional: reler apenas os conceitos em que errou, sem fazer novas questões. Máximo 1h. O descanso entre simulados é parte da estratégia.</div>
-</div></div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Dia 24</span><span class="dtitle">2º Simulado completo — prova FATEC 2024 (5h)</span></div><div class="card-body">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Mesmas condições do Dia 21 — prova FATEC 1º semestre 2024</div>
-<div class="rd">Comparar desempenho com o 1º simulado. Espera-se melhora de 5–10% por disciplina. Se alguma área piorou, identificar o motivo antes da prova real.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Atenção especial para a redação — usar obrigatoriamente 1 dado concreto e 1 referência histórica ou científica por argumento</div>
-<div class="rd">Uma conclusão específica (agente + ação + finalidade) vale muito mais do que uma conclusão genérica sobre "consciência coletiva" ou "educação em geral".</div>
-</div></div>
-</div>
-</div></div>
-<div class="tip"><strong>Semanas adicionais antes da prova real:</strong> a partir daqui, manter 1 redação/semana sobre temas prováveis (aba Temas Polêmicos). Uma semana antes da prova, não fazer simulado completo — apenas revisão leve de 1–2h dos conceitos mais frágeis identificados nos simulados.</div>
-</div><!-- /s5 -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 7 — EIXOS INTEGRADORES
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="eixos">
-<div class="sec">Eixos integradores — como as disciplinas se conectam em temas</div>
-<div class="eixo">
-<div class="eixo-t">Eixo 1 — Tecnologia &amp; Sociedade <span class="badge b-red">toda prova — 5/5</span></div>
-<div class="eixo-c">
-<span style="background:var(--green-bg);color:var(--green-tx)">Química</span> combustíveis fósseis × biocombustíveis (octano, metano, etanol, CO₂)
-    <br/>→ <span style="background:var(--amber-bg);color:var(--amber-tx)">História</span> Revoluções: carvão → vapor → eletricidade → dados e IA
-    <br/>→ <span style="background:var(--amber-bg);color:var(--amber-tx)">Geografia</span> matrizes energéticas, pegada de carbono, aquecimento global
-    <br/>→ <span style="background:var(--purple-bg);color:var(--purple-tx)">Português</span> ironia sobre greenwashing, argumentação sobre impacto tecnológico
-    <br/>→ <span style="background:var(--blue-bg);color:var(--blue-tx)">Inglês</span> textos sobre IA, sustentabilidade e inovação (MIT Tech Review, InfoWorld)
-    <br/>→ <span style="background:var(--red-bg);color:var(--red-tx)">Redação</span> tema central das 5 provas analisadas — sem exceção
+<!-- ░░ HERO ░░ -->
+<div class="hero">
+  <div class="hero-badge">Análise Pedagógica · FATEC Vestibular</div>
+  <h1>GUIA<br><span>FATEC</span></h1>
+  <p class="hero-sub">Análise profunda das provas de 2023 a 2026 — padrões, prioridades e cronograma estratégico de estudos.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">4</div><div class="lbl">Provas analisadas</div></div>
+    <div class="hero-stat"><div class="num">236</div><div class="lbl">Questões mapeadas</div></div>
+    <div class="hero-stat"><div class="num">12</div><div class="lbl">Semanas de plano</div></div>
+    <div class="hero-stat"><div class="num">8</div><div class="lbl">Disciplinas rankeadas</div></div>
   </div>
 </div>
-<div class="eixo">
-<div class="eixo-t">Eixo 2 — Sustentabilidade &amp; Bioeconomia <span class="badge b-amber">4/5 provas</span></div>
-<div class="eixo-c">
-<span style="background:var(--green-bg);color:var(--green-tx)">Biologia</span> adubação verde, Rhizobium, fixação biológica do nitrogênio, biotecnologia agrícola
-    <br/>→ <span style="background:var(--green-bg);color:var(--green-tx)">Química</span> biogás, biodiesel, hidrogênio verde, nanoplásticos, separação magnética
-    <br/>→ <span style="background:var(--amber-bg);color:var(--amber-tx)">Geografia</span> pegada de carbono por alimento, CCS, valor econômico da Amazônia
-    <br/>→ <span style="background:var(--amber-bg);color:var(--amber-tx)">História</span> Proálcool (1975), Revolução Verde (1960–70), Vargas e CSN
-    <br/>→ <span style="background:var(--purple-bg);color:var(--purple-tx)">Português</span> charges sobre greenwashing (The Magic of Marketing, prova 2025)
-    <br/>→ <span style="background:var(--red-bg);color:var(--red-tx)">Redação</span> "Tecnologia e economia sustentável" — prova 2025
+
+<!-- ░░ NAV ░░ -->
+<nav>
+  <a href="#etapa1">Mapeamento</a>
+  <a href="#etapa2">Padrões</a>
+  <a href="#etapa3">Ranking</a>
+  <a href="#etapa4">Cronograma</a>
+  <a href="#etapa5">Dicas</a>
+</nav>
+
+<!-- ░░ ETAPA 1 ░░ -->
+<section id="etapa1">
+  <div class="section-label">Etapa 01</div>
+  <h2>Mapeamento Geral</h2>
+  <p class="section-desc">Distribuição de questões por disciplina em cada edição analisada (1º sem 2023, 1º sem 2024, 2025 e 1º sem 2026).</p>
+
+  <div class="years-grid reveal">
+
+    <!-- 2023 -->
+    <div class="year-card y2023">
+      <div class="year-title">2023</div>
+      <div class="year-meta">54 questões · Tema: Tecnologia</div>
+      <div class="subject-row"><span class="subject-name">Língua Portuguesa</span><span class="subject-count">11 q</span></div>
+      <div class="subject-row"><span class="subject-name">Matemática</span><span class="subject-count">9 q</span></div>
+      <div class="subject-row"><span class="subject-name">Ciências da Natureza</span><span class="subject-count">8 q</span></div>
+      <div class="subject-row"><span class="subject-name">Física</span><span class="subject-count">5 q</span></div>
+      <div class="subject-row"><span class="subject-name">Química</span><span class="subject-count">5 q</span></div>
+      <div class="subject-row"><span class="subject-name">História / Geografia</span><span class="subject-count">7 q</span></div>
+      <div class="subject-row"><span class="subject-name">Inglês</span><span class="subject-count">4 q</span></div>
+      <div class="subject-row"><span class="subject-name">Raciocínio Lógico</span><span class="subject-count">5 q</span></div>
+      <br>
+      <div class="tag-list">
+        <span class="diff-badge diff-m">Médio</span>
+        <span class="tag tag-fixed">Interpretação textual forte</span>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="year-card y2024">
+      <div class="year-title">2024</div>
+      <div class="year-meta">54 questões · Tema: Arte & Cultura</div>
+      <div class="subject-row"><span class="subject-name">Língua Portuguesa</span><span class="subject-count">12 q</span></div>
+      <div class="subject-row"><span class="subject-name">Matemática</span><span class="subject-count">10 q</span></div>
+      <div class="subject-row"><span class="subject-name">Ciências da Natureza</span><span class="subject-count">8 q</span></div>
+      <div class="subject-row"><span class="subject-name">Física</span><span class="subject-count">4 q</span></div>
+      <div class="subject-row"><span class="subject-name">Química</span><span class="subject-count">4 q</span></div>
+      <div class="subject-row"><span class="subject-name">História / Geografia</span><span class="subject-count">8 q</span></div>
+      <div class="subject-row"><span class="subject-name">Inglês</span><span class="subject-count">4 q</span></div>
+      <div class="subject-row"><span class="subject-name">Raciocínio Lógico</span><span class="subject-count">4 q</span></div>
+      <br>
+      <div class="tag-list">
+        <span class="diff-badge diff-m">Médio</span>
+        <span class="tag tag-fixed">Cálculo aplicado a contextos</span>
+      </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="year-card y2025">
+      <div class="year-title">2025</div>
+      <div class="year-meta">64 questões · Tema: Economia Verde</div>
+      <div class="subject-row"><span class="subject-name">Língua Portuguesa</span><span class="subject-count">13 q</span></div>
+      <div class="subject-row"><span class="subject-name">Matemática</span><span class="subject-count">13 q</span></div>
+      <div class="subject-row"><span class="subject-name">Ciências da Natureza</span><span class="subject-count">10 q</span></div>
+      <div class="subject-row"><span class="subject-name">Física</span><span class="subject-count">6 q</span></div>
+      <div class="subject-row"><span class="subject-name">Química</span><span class="subject-count">6 q</span></div>
+      <div class="subject-row"><span class="subject-name">História / Geografia</span><span class="subject-count">9 q</span></div>
+      <div class="subject-row"><span class="subject-name">Inglês</span><span class="subject-count">4 q</span></div>
+      <div class="subject-row"><span class="subject-name">Raciocínio Lógico</span><span class="subject-count">3 q</span></div>
+      <br>
+      <div class="tag-list">
+        <span class="diff-badge diff-d">Difícil</span>
+        <span class="tag tag-new">+10 questões vs anos anteriores</span>
+      </div>
+    </div>
+
+    <!-- 2026 -->
+    <div class="year-card y2026">
+      <div class="year-title">2026</div>
+      <div class="year-meta">60 questões · Tema: Tecnologia & Desinformação</div>
+      <div class="subject-row"><span class="subject-name">Língua Portuguesa</span><span class="subject-count">12 q</span></div>
+      <div class="subject-row"><span class="subject-name">Matemática</span><span class="subject-count">10 q</span></div>
+      <div class="subject-row"><span class="subject-name">Ciências da Natureza</span><span class="subject-count">9 q</span></div>
+      <div class="subject-row"><span class="subject-name">Física</span><span class="subject-count">5 q</span></div>
+      <div class="subject-row"><span class="subject-name">Química</span><span class="subject-count">5 q</span></div>
+      <div class="subject-row"><span class="subject-name">História / Geografia</span><span class="subject-count">10 q</span></div>
+      <div class="subject-row"><span class="subject-name">Inglês</span><span class="subject-count">5 q</span></div>
+      <div class="subject-row"><span class="subject-name">Raciocínio Lógico</span><span class="subject-count">4 q</span></div>
+      <br>
+      <div class="tag-list">
+        <span class="diff-badge diff-d">Difícil</span>
+        <span class="tag tag-new">Hist/Geo em alta</span>
+      </div>
+    </div>
+
   </div>
-</div>
-<div class="eixo">
-<div class="eixo-t">Eixo 3 — Desinformação &amp; Ciência <span class="badge b-amber">3/5 provas — em alta</span></div>
-<div class="eixo-c">
-<span style="background:var(--purple-bg);color:var(--purple-tx)">Português</span> tirinhas (cão e fake news, prova 2026), meme das árvores e Wi-Fi, infográfico OCDE
-    <br/>→ <span style="background:var(--blue-bg);color:var(--blue-tx)">Inglês</span> "Cherry picking in the media" (2023), AI carbon footprint (MIT, 2025)
-    <br/>→ <span style="background:var(--amber-bg);color:var(--amber-tx)">Geografia</span> negacionismo climático, pesquisa Noções sobre a Ciência (OCDE, 2023)
-    <br/>→ <span style="background:var(--amber-bg);color:var(--amber-tx)">História</span> Gutenberg e a imprensa, propaganda de guerra (2ª Guerra), poliomielite
-    <br/>→ <span style="background:var(--green-bg);color:var(--green-tx)">Biologia</span> vacinação e poliomielite, negacionismo vacinal, taxa de 44% em 2022
-    <br/>→ <span style="background:var(--red-bg);color:var(--red-tx)">Redação</span> tema central da prova 2026 — candidato forte para 2027 também
+</section>
+
+<!-- ░░ ETAPA 2 ░░ -->
+<section id="etapa2">
+  <div class="section-label">Etapa 02</div>
+  <h2>Análise de Padrões</h2>
+  <p class="section-desc">Frequência temática, formatos e tendências observadas entre 2023 e 2026.</p>
+
+  <div class="patterns-grid reveal">
+
+    <div class="pattern-card">
+      <h3><span class="dot dot-green"></span>Temas Fixos (todos os anos)</h3>
+      <div class="tag-list">
+        <span class="tag tag-fixed">Interpretação de texto em PT</span>
+        <span class="tag tag-fixed">Funções matemáticas</span>
+        <span class="tag tag-fixed">Equações e inequações</span>
+        <span class="tag tag-fixed">Biologia celular / genética</span>
+        <span class="tag tag-fixed">Reações químicas / equações</span>
+        <span class="tag tag-fixed">Eletricidade / Física aplicada</span>
+        <span class="tag tag-fixed">Leitura de gráficos e tabelas</span>
+        <span class="tag tag-fixed">Questões em língua inglesa</span>
+        <span class="tag tag-fixed">Contexto histórico brasileiro</span>
+        <span class="tag tag-fixed">Figuras de linguagem</span>
+        <span class="tag tag-fixed">Lógica / conjuntos</span>
+        <span class="tag tag-fixed">Probabilidade e estatística</span>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <h3><span class="dot dot-blue"></span>Alta Frequência (≥3 anos)</h3>
+      <div class="tag-list">
+        <span class="tag tag-high">Energia renovável / sustentabilidade</span>
+        <span class="tag tag-high">Progressões (PA e PG)</span>
+        <span class="tag tag-high">Geometria espacial</span>
+        <span class="tag tag-high">Biotecnologia / DNA</span>
+        <span class="tag tag-high">Análise de charges e tirinhas</span>
+        <span class="tag tag-high">Análise combinatória</span>
+        <span class="tag tag-high">Termoquímica / entalpia</span>
+        <span class="tag tag-high">Revolução Industrial</span>
+        <span class="tag tag-high">Globalização e tecnologia</span>
+        <span class="tag tag-high">Questões interdisciplinares</span>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <h3><span class="dot dot-purple"></span>Tendências Recentes (2024–2026)</h3>
+      <div class="tag-list">
+        <span class="tag tag-new">Inteligência Artificial como tema</span>
+        <span class="tag tag-new">Fake news / desinformação</span>
+        <span class="tag tag-new">Saúde pública e doenças (pós-pandemia)</span>
+        <span class="tag tag-new">Crise climática e ESG</span>
+        <span class="tag tag-new">Dados e matrizes (Ciência de Dados)</span>
+        <span class="tag tag-new">História global (Guerra Fria, Belle Époque)</span>
+        <span class="tag tag-new">Química orgânica (polímeros, PFAS)</span>
+        <span class="tag tag-new">Questões com infográficos</span>
+        <span class="tag tag-new">pH e soluções</span>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <h3><span class="dot dot-red"></span>Raramente / Uma Vez</h3>
+      <div class="tag-list">
+        <span class="tag tag-low">Geometria analítica pura</span>
+        <span class="tag tag-low">Trigonometria isolada</span>
+        <span class="tag tag-low">Literatura brasileira clássica</span>
+        <span class="tag tag-low">Óptica geométrica</span>
+        <span class="tag tag-low">Termodinâmica avançada</span>
+        <span class="tag tag-low">Mecânica de fluidos</span>
+        <span class="tag tag-low">Estequiometria avançada</span>
+      </div>
+    </div>
+
   </div>
-</div>
-<div class="sec" style="margin-top:1.5rem">Matriz de integração — qual conceito aparece em qual disciplina</div>
-<div style="overflow-x:auto">
-<table class="mtable">
-<thead>
-<tr><th>Conceito / tema</th><th>Port.</th><th>Ingl.</th><th>Mat.</th><th>Ciênc.</th><th>Hum.</th><th>Red.</th></tr>
-</thead>
-<tbody>
-<tr><td>Combustíveis e CO₂</td><td class="c0">—</td><td class="c4">4/5</td><td class="c4">4/5</td><td class="c5">5/5</td><td class="c4">4/5</td><td class="c5">5/5</td></tr>
-<tr><td>Inteligência artificial</td><td class="c3">3/5</td><td class="c4">4/5</td><td class="c4">4/5</td><td class="c4">4/5</td><td class="c3">3/5</td><td class="c5">5/5</td></tr>
-<tr><td>Sustentabilidade / bioeconomia</td><td class="c4">4/5</td><td class="c4">4/5</td><td class="c3">3/5</td><td class="c5">5/5</td><td class="c5">5/5</td><td class="c5">5/5</td></tr>
-<tr><td>Desinformação / fake news</td><td class="c5">5/5</td><td class="c4">4/5</td><td class="c0">—</td><td class="c3">3/5</td><td class="c3">3/5</td><td class="c4">4/5</td></tr>
-<tr><td>Mercado de trabalho</td><td class="c3">3/5</td><td class="c4">4/5</td><td class="c0">—</td><td class="c0">—</td><td class="c4">4/5</td><td class="c5">5/5</td></tr>
-<tr><td>Energia renovável</td><td class="c3">3/5</td><td class="c3">3/5</td><td class="c4">4/5</td><td class="c5">5/5</td><td class="c4">4/5</td><td class="c4">4/5</td></tr>
-<tr><td>Biotecnologia (DNA, insulina)</td><td class="c0">—</td><td class="c3">3/5</td><td class="c0">—</td><td class="c5">5/5</td><td class="c3">3/5</td><td class="c3">3/5</td></tr>
-<tr><td>Representatividade / arte</td><td class="c5">5/5</td><td class="c4">4/5</td><td class="c0">—</td><td class="c0">—</td><td class="c4">4/5</td><td class="c4">4/5</td></tr>
-<tr><td>Globalização / espaço geográfico</td><td class="c3">3/5</td><td class="c3">3/5</td><td class="c0">—</td><td class="c0">—</td><td class="c5">5/5</td><td class="c3">3/5</td></tr>
-</tbody>
-</table>
-</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:.75rem;font-size:11px;color:var(--tx2)">
-<span><span class="badge b-red">5/5</span> toda prova</span>
-<span><span class="badge b-amber">4/5</span> alta frequência</span>
-<span><span class="badge b-green">3/5</span> frequência média</span>
-</div>
-</div><!-- /eixos -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 8 — TEMAS POLÊMICOS
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="polemicos">
-<div class="sec">Temas polêmicos — repertório para redação e argumentação crítica</div>
-<div class="polemic">
-<div class="polemic-t">Tema 1 — Negacionismo climático <span class="badge b-red">aparece em Geo + Bio + Redação</span></div>
-<div class="polemic-b">
-<strong>Tensão central:</strong> negação do consenso científico sobre o aquecimento global causado por emissões humanas — apresentada como "opinião alternativa" quando é, na verdade, contrariedade a dados verificáveis.<br/><br/>
-<strong>O que a ciência diz:</strong> a última década foi a mais quente já registrada. O IPCC, reunindo milhares de pesquisadores de 195 países, confirma que gases de efeito estufa de origem humana são a principal causa. O negacionismo climático desconsidera evidências incontestáveis — exatamente como a FATEC 2026 definiu o termo na prova (Q18).<br/><br/>
-<strong>Dado para redação:</strong> segundo a pesquisa Noções sobre a Ciência (OCDE, 2023), 35% dos brasileiros acreditam, total ou parcialmente, que vacinas causam autismo. O mesmo mecanismo de negação científica aplica-se ao clima — crença em plataformas de baixa credibilidade em detrimento do consenso científico.<br/><br/>
-<strong>Como estruturar o argumento:</strong> 1º parágrafo = o problema (negacionismo potencializado por redes sociais e baixo letramento científico). 2º parágrafo = o custo real (decisões políticas e econômicas que ignoram dados climáticos). Conclusão = políticas de educação científica nas escolas + regulação de plataformas digitais.
+
+  <div class="card reveal" style="margin-top:1.2rem;">
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.06em;margin-bottom:1rem;">📊 Padrões de Formato Observados</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;">
+      <div>
+        <div style="font-size:0.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.5rem;">Formato dominante</div>
+        <p style="font-size:0.85rem;">Enunciados com <strong>texto-âncora</strong> (notícia, artigo, charge) seguidos de 1–3 questões. Exige leitura crítica antes mesmo de interpretar o enunciado da questão.</p>
+      </div>
+      <div>
+        <div style="font-size:0.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.5rem;">Questões mais longas</div>
+        <p style="font-size:0.85rem;">Português, Biologia e História/Geografia costumam ter enunciados longos com 2–3 parágrafos de contexto + múltiplas afirmativas nas alternativas.</p>
+      </div>
+      <div>
+        <div style="font-size:0.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.5rem;">Questões mais curtas</div>
+        <p style="font-size:0.85rem;">Matemática e Física tendem a enunciados objetivos (1–2 frases) com grande carga de cálculo. Inglês é direto ao ponto com textos curtos.</p>
+      </div>
+      <div>
+        <div style="font-size:0.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.5rem;">Tendência de dificuldade</div>
+        <p style="font-size:0.85rem;">Nível crescente: 2023–2024 médio; 2025 notavelmente mais difícil (64 q + contextos mais complexos); 2026 manteve dificuldade elevada com foco interdisciplinar.</p>
+      </div>
+    </div>
   </div>
-</div>
-<div class="polemic">
-<div class="polemic-t">Tema 2 — Inteligência artificial e o futuro do emprego <span class="badge b-red">em alta — candidato forte 2027</span></div>
-<div class="polemic-b">
-<strong>Tensão central:</strong> a IA pode exterminar empregos rotineiros mas também cria novas demandas técnicas. O Fórum Econômico Mundial estima extinção de 5 milhões de vagas nos 15 países mais industrializados, enquanto a demanda por profissionais de TI cresce mais rápido que a formação.<br/><br/>
-<strong>Dado 1 (mercado):</strong> o Brasil forma ~50 mil profissionais de TI por ano, mas a Brasscom projeta demanda de mais de 200 mil vagas em 2025 — déficit de 150 mil pessoas qualificadas.<br/><br/>
-<strong>Dado 2 (impacto ambiental):</strong> ferramentas de IA Gen consomem até 450 MWh/ano — equivalente ao consumo anual de 9 mil habitantes. A "sustentabilidade da IA" é um paradoxo real que conecta esse tema ao Eixo 2 (sustentabilidade).<br/><br/>
-<strong>Contraponto a refutar:</strong> "a tecnologia sempre cria mais empregos do que destrói". Refutação: a velocidade da 4ª Revolução é sem precedentes históricos — a transição não é naturalmente justa e exige requalificação ativa financiada por políticas públicas, não apenas pela iniciativa individual.<br/><br/>
-<strong>Conclusão modelo:</strong> cabe ao Estado, em parceria com empresas de tecnologia, financiar programas contínuos de requalificação profissional — especialmente para trabalhadores de setores vulneráveis à automação —, a fim de garantir que os ganhos da 4ª Revolução Industrial sejam distribuídos e não concentrados.
+</section>
+
+<!-- ░░ ETAPA 3 ░░ -->
+<section id="etapa3">
+  <div class="section-label">Etapa 03</div>
+  <h2>Ranking de Prioridades</h2>
+  <p class="section-desc">Matérias ordenadas por frequência, peso e tendência de crescimento recente.</p>
+
+  <div class="card reveal" style="padding:0;">
+    <table class="ranking-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Matéria / Tema</th>
+          <th>Frequência</th>
+          <th>Peso médio</th>
+          <th>Tendência</th>
+          <th>Foco principal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="rank-num top3">1</div></td>
+          <td><strong>Língua Portuguesa</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:100%"></div></div> 4/4</td>
+          <td>~12 q</td>
+          <td><span class="trend-up">↑ Crescendo</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Interpretação, figuras de linguagem, gramática contextual</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num top3">2</div></td>
+          <td><strong>Matemática</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:100%"></div></div> 4/4</td>
+          <td>~11 q</td>
+          <td><span class="trend-up">↑ Crescendo</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Funções, probabilidade, PA/PG, geometria, matrizes</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num top3">3</div></td>
+          <td><strong>Biologia / C. da Natureza</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:100%"></div></div> 4/4</td>
+          <td>~9 q</td>
+          <td><span class="trend-same">→ Estável</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Genética, ecologia, biotecnologia, saúde pública</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num">4</div></td>
+          <td><strong>História & Geografia</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:90%"></div></div> 4/4</td>
+          <td>~8 q</td>
+          <td><span class="trend-up">↑ Em alta</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Brasil República, geopolítica, revoluções, urbanização</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num">5</div></td>
+          <td><strong>Química</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:85%"></div></div> 4/4</td>
+          <td>~5 q</td>
+          <td><span class="trend-up">↑ Orgânica em alta</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Reações, equilíbrio, termoquímica, org. básica, pH</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num">6</div></td>
+          <td><strong>Física</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:80%"></div></div> 4/4</td>
+          <td>~5 q</td>
+          <td><span class="trend-same">→ Estável</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Eletricidade, ondulatória, mecânica, energia</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num">7</div></td>
+          <td><strong>Inglês</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:70%"></div></div> 4/4</td>
+          <td>~4-5 q</td>
+          <td><span class="trend-up">↑ Levemente</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Interpretação, modal verbs, vocabulário contextual</td>
+        </tr>
+        <tr>
+          <td><div class="rank-num">8</div></td>
+          <td><strong>Raciocínio Lógico</strong></td>
+          <td><div class="freq-bar"><div class="freq-fill" style="width:55%"></div></div> 4/4</td>
+          <td>~4 q</td>
+          <td><span class="trend-down">↓ Leve queda</span></td>
+          <td style="font-size:0.8rem;color:var(--text-muted);">Conjuntos, lógica proposicional, sequências</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-</div>
-<div class="polemic">
-<div class="polemic-t">Tema 3 — IA, algoritmos e a crise da democracia <span class="badge b-amber">média probabilidade 2027</span></div>
-<div class="polemic-b">
-<strong>Tensão central:</strong> algoritmos de IA maximizam engajamento, não veracidade. Conteúdo emocionalmente carregado (raiva, medo) gera mais cliques — o que favorece a desinformação estruturalmente, independente da intenção de quem posta. Ao mesmo tempo, a mesma IA pode ser usada para verificar fatos em escala.<br/><br/>
-<strong>Dado:</strong> Brasil lidera consumo de notícias por redes sociais (50% das informações, OCDE). Quem mais confia nas redes tem o pior desempenho em identificar fake news: 54% de acerto vs. 62% de quem confia pouco. A diferença é pequena, mas consistente e preocupante em termos de saúde democrática.<br/><br/>
-<strong>Como usar:</strong> argumento de dois gumes — a IA é parte do problema (amplifica desinformação via algoritmo) e parte da solução (fact-checking automatizado). Isso cria um argumento de contraponto natural e sofisticado. Conclusão: regulação pública dos algoritmos + letramento digital obrigatório no currículo escolar.
+</section>
+
+<!-- ░░ ETAPA 4 ░░ -->
+<section id="etapa4">
+  <div class="section-label">Etapa 04</div>
+  <h2>Cronograma de Estudos</h2>
+  <p class="section-desc">Plano de 12 semanas · ~2–3h/dia · Prioridades baseadas na análise das provas.</p>
+
+  <div class="weeks-container">
+
+    <!-- FASE 1 -->
+    <div class="phase-header reveal">
+      <div class="phase-num">01</div>
+      <div class="phase-info">
+        <h3>Fundamentos de Alta Prioridade</h3>
+        <p>Semanas 1–4 · Foco nas matérias com maior peso e frequência</p>
+      </div>
+    </div>
+
+    <!-- S1 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 01</span>
+        <span class="week-title">Português — Interpretação de Texto & Figuras de Linguagem</span>
+        <div class="week-meta">
+          <span class="week-tag wt-base">Base</span>
+          <span class="week-tag" style="background:rgba(0,229,160,0.08);color:var(--text-muted);font-size:0.65rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:6px;">~14h</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Dominar a leitura crítica de textos jornalísticos, charges e tirinhas. Identificar corretamente ironia, metáfora, eufemismo, personificação e catacrese nos enunciados.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Interpretação textual</div><div class="day-detail">Tipos textuais, coerência e coesão. Exercícios com textos de opinião.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Figuras de linguagem I</div><div class="day-detail">Metáfora, metonímia, catacrese, hipérbole. 15 questões práticas.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Figuras de linguagem II</div><div class="day-detail">Ironia, eufemismo, antítese, paradoxo, personificação. 15 questões.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Charges & tirinhas</div><div class="day-detail">Linguagem verbal + não-verbal. Análise de 8 charges com gabarito comentado.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Gramática contextual</div><div class="day-detail">Preposições, conjunções, pronomes relativos em contexto. 20 questões.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Revisão + Exercícios</div><div class="day-detail">Resolver 10 questões de PT das provas 2023–2024 FATEC.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S2 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 02</span>
+        <span class="week-title">Matemática — Funções, Progressões e Probabilidade</span>
+        <div class="week-meta">
+          <span class="week-tag wt-base">Base</span>
+          <span class="week-tag" style="background:rgba(0,229,160,0.08);color:var(--text-muted);font-size:0.65rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:6px;">~14h</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Resolver sem dificuldade questões de função quadrática, PA/PG e probabilidade simples. Saber ler gráficos e tabelas de dados.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Funções I</div><div class="day-detail">Função afim e quadrática. Vértice, raízes, domínio. 12 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Funções II</div><div class="day-detail">Função exponencial e logarítmica. Cálculo de pH, crescimento populacional.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">PA e PG</div><div class="day-detail">Razão, termos, soma de termos. 15 exercícios contextualizados (cabo de rede, produção).</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Probabilidade</div><div class="day-detail">Espaço amostral, eventos independentes, probabilidade condicional. 12 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Estatística descritiva</div><div class="day-detail">Média, mediana, moda, desvio padrão. Leitura de gráficos de barras e setores.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Simulado Parcial</div><div class="day-detail">10 questões de Matemática das provas FATEC 2023–2024.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S3 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 03</span>
+        <span class="week-title">Biologia — Genética, Biotecnologia e Ecologia</span>
+        <div class="week-meta">
+          <span class="week-tag wt-base">Base</span>
+          <span class="week-tag" style="background:rgba(0,229,160,0.08);color:var(--text-muted);font-size:0.65rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:6px;">~14h</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Dominar heredograma, DNA recombinante, tipos sanguíneos e cadeias alimentares. Entender a lógica das questões de saúde pública (doenças, transmissão, prevenção).
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Genética I</div><div class="day-detail">Leis de Mendel, heredograma, dominância e recessividade. 12 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Genética II / Biotech</div><div class="day-detail">DNA, RNA, síntese proteica, DNA recombinante, organismos transgênicos.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Saúde pública</div><div class="day-detail">Doenças infectocontagiosas, parasitoses, vacinação, soro. Tabela comparativa.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Ecologia</div><div class="day-detail">Cadeia e teia alimentar, ciclos biogeoquímicos, biomas brasileiros.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Fisiologia animal</div><div class="day-detail">Sistemas digestório, circulatório, nervoso. Fotossíntese x respiração.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Revisão geral de Bio</div><div class="day-detail">Resolver 10 questões de Bio das provas FATEC 2023–2026.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S4 — REVISÃO -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 04</span>
+        <span class="week-title">⚡ Revisão Fase 1 + Simulado das Provas 2023 e 2024</span>
+        <div class="week-meta">
+          <span class="week-tag wt-rev">Revisão</span>
+          <span class="week-tag wt-sim">Simulado</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Identificar pontos fracos nas 3 disciplinas estudadas. Corrigir erros com foco qualitativo, não apenas quantitativo.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Revisão PT</div><div class="day-detail">Rever fichas de figuras de linguagem. Refazer questões erradas.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Revisão MAT</div><div class="day-detail">Rever fórmulas de funções e progressões. Refazer questões erradas.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Revisão BIO</div><div class="day-detail">Rever tabela de doenças e heredogramas. Refazer questões erradas.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Simulado — Prova 2023</div><div class="day-detail">Prova inteira da FATEC 1º sem 2023. Cronometre: 5 horas máx.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Correção simulado</div><div class="day-detail">Corrigir questão a questão. Anotar temas com ≥2 erros para reforço.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Reforço pontual</div><div class="day-detail">Estudar exclusivamente os temas com mais erros no simulado.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+        <div class="simulado-box">
+          <strong>🎯 Simulado desta semana</strong>
+          Use a prova completa do Vestibular FATEC 1º Semestre 2023 (54 questões). Faça em condições reais: cronometrado, sem consulta, folha de respostas.
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 2 -->
+    <div class="phase-header reveal">
+      <div class="phase-num">02</div>
+      <div class="phase-info">
+        <h3>Aprofundamento — Ciências Exatas & História</h3>
+        <p>Semanas 5–8 · Química, Física, História/Geografia e Inglês</p>
+      </div>
+    </div>
+
+    <!-- S5 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 05</span>
+        <span class="week-title">Química — Reações, Equilíbrio e Termoquímica</span>
+        <div class="week-meta">
+          <span class="week-tag wt-mid">Médio</span>
+          <span class="week-tag" style="background:rgba(0,229,160,0.08);color:var(--text-muted);font-size:0.65rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:6px;">~14h</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Balancear equações, calcular entalpia pela Lei de Hess, interpretar tabela periódica e resolver questões de pH. Entender funções orgânicas básicas.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Reações químicas</div><div class="day-detail">Balanceamento, tipos de reação, estequiometria básica. 15 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Termoquímica</div><div class="day-detail">Entalpia, exo/endotérmica, Lei de Hess. 10 exercícios com cálculo.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Equilíbrio químico</div><div class="day-detail">Constante de equilíbrio Kc, Le Chatelier. 10 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Tabela periódica</div><div class="day-detail">Grupos, períodos, propriedades periódicas, ligações iônicas e covalentes.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Orgânica & pH</div><div class="day-detail">Funções orgânicas (álcool, ácido, aldeído, éster). Cálculo de pH com log.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Questões FATEC de Química</div><div class="day-detail">Resolver 10 questões de Química das provas 2023–2026.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S6 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 06</span>
+        <span class="week-title">Física — Eletricidade, Ondas e Energia</span>
+        <div class="week-meta">
+          <span class="week-tag wt-mid">Médio</span>
+          <span class="week-tag" style="background:rgba(0,229,160,0.08);color:var(--text-muted);font-size:0.65rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:6px;">~14h</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Resolver questões de circuitos elétricos simples, cálculo de potência, frequência de ondas eletromagnéticas e conversão de energia. Entender a física por trás de tecnologias (NFC, laser, baterias).
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Eletricidade I</div><div class="day-detail">Corrente, tensão, resistência, Lei de Ohm. Circuitos série e paralelo.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Eletricidade II</div><div class="day-detail">Potência elétrica (P=VI), energia, kWh. 12 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Ondulatória</div><div class="day-detail">v = λf, espectro eletromagnético, infravermelho, frequência e período.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Mecânica</div><div class="day-detail">MRU, MRUV, lançamento oblíquo, energia cinética e potencial.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Eletromagnetismo</div><div class="day-detail">Campo magnético, força magnética, ímãs, aplicações tecnológicas.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Questões FATEC de Física</div><div class="day-detail">Resolver 10 questões de Física das provas 2023–2026.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S7 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 07</span>
+        <span class="week-title">História & Geografia + Inglês</span>
+        <div class="week-meta">
+          <span class="week-tag wt-mid">Médio</span>
+          <span class="week-tag" style="background:rgba(0,229,160,0.08);color:var(--text-muted);font-size:0.65rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:6px;">~14h</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Dominar os principais eventos históricos recorrentes na FATEC (Revolução Industrial, Brasil República, Guerra Fria, Era Vargas). Ler textos em inglês com confiança e interpretar modal verbs.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">História do Brasil</div><div class="day-detail">República Velha, Era Vargas, populismo. Linha do tempo comentada.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">História Mundial</div><div class="day-detail">Rev. Industrial, Belle Époque, 1ª e 2ª Guerras, Guerra Fria. Mapa mental.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Geografia humana</div><div class="day-detail">Globalização, urbanização, migrações, favelas e território.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Geografia física</div><div class="day-detail">Relevo, clima, biomas, intemperismo, chuvas. Brasil e América Latina.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Inglês</div><div class="day-detail">Modal verbs (must, can, should), interpretação de textos curtos, antônimos, expressões adverbiais.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Questões FATEC Hist+Geo+EN</div><div class="day-detail">10 questões de cada área das provas 2023–2026.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S8 — REVISÃO -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 08</span>
+        <span class="week-title">⚡ Revisão Fase 2 + Simulado da Prova 2024</span>
+        <div class="week-meta">
+          <span class="week-tag wt-rev">Revisão</span>
+          <span class="week-tag wt-sim">Simulado</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Nivelar Química, Física e Hist/Geo. Identificar quais áreas ainda comprometem a nota global e focar cirurgicamente nos gaps.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Revisão QUI+FIS</div><div class="day-detail">Ficha de fórmulas: v=λf, P=VI, Kc, entalpia, pH. Treinar com 10 questões.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Revisão HIST+GEO</div><div class="day-detail">Linha do tempo dos principais eventos. Revisão de mapas e biomas.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Revisão Inglês</div><div class="day-detail">Rever 5 textos de provas anteriores. Treinar vocabulário de tecnologia/ciência.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Simulado — Prova 2024</div><div class="day-detail">Prova inteira da FATEC 1º sem 2024. Cronometre: 5 horas máx.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Correção simulado</div><div class="day-detail">Corrigir todas as questões. Classificar erros por disciplina e tipo.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Reforço pontual</div><div class="day-detail">Estudar disciplinas com ≥3 erros no simulado. Lista de exercícios focados.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+        <div class="simulado-box">
+          <strong>🎯 Simulado desta semana</strong>
+          Use a prova completa do Vestibular FATEC 1º Semestre 2024 (54 questões). Compare seu resultado com o da semana 4 e meça a evolução.
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 3 -->
+    <div class="phase-header reveal">
+      <div class="phase-num">03</div>
+      <div class="phase-info">
+        <h3>Temas Avançados & Tendências Recentes</h3>
+        <p>Semanas 9–10 · IA, sustentabilidade, interdisciplinaridade, Matemática avançada</p>
+      </div>
+    </div>
+
+    <!-- S9 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 09</span>
+        <span class="week-title">Matemática Avançada — Matrizes, Combinatória, Trigonometria</span>
+        <div class="week-meta">
+          <span class="week-tag wt-adv">Avançado</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Resolver questões de análise combinatória (arranjo, permutação, combinação), matrizes e introdução a funções trigonométricas aplicadas (como na prova 2026 com roda-gigante).
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Análise combinatória</div><div class="day-detail">Princípio multiplicativo, arranjo, permutação, combinação. 15 exercícios.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Matrizes</div><div class="day-detail">Operações, multiplicação, aplicações em imagens digitais (tipo FATEC 2026).</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Funções trig. aplicadas</div><div class="day-detail">Sen, cos, equações com funções periódicas (altura de roda-gigante, etc.).</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Geometria espacial</div><div class="day-detail">Cilindro, cone, esfera, prisma. Cálculo de volume e área lateral.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Matemática financeira</div><div class="day-detail">Juros simples e compostos, porcentagem, proporção. Aplicações práticas.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Questões FATEC MAT 2025–26</div><div class="day-detail">Resolver 12 questões de Matemática das provas 2025 e 2026.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- S10 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 10</span>
+        <span class="week-title">Temas Recorrentes: IA, Sustentabilidade & Interdisciplinaridade</span>
+        <div class="week-meta">
+          <span class="week-tag wt-adv">Avançado</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Entender o vocabulário e os conceitos dos temas transversais recentes: IA generativa, economia verde, biotecnologia moderna, fake news e saúde pública pós-pandemia.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">IA e Tecnologia Digital</div><div class="day-detail">Blockchain, NFT, consumo energético de IA, código de barras, NFC. 10 q.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Sustentabilidade</div><div class="day-detail">Economia verde, bioeconomia, biocombustíveis, crédito de carbono. 10 q.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Biotecnologia moderna</div><div class="day-detail">OGMs, insulina sintética, DNA recombinante, PFAS, baterias de lítio.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Fake news & Ciência</div><div class="day-detail">Letramento científico, cherry picking, desinformação. Questões de PT e Ciências.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Saúde pública</div><div class="day-detail">Vacinação, verminoses, doenças negligenciadas, saneamento básico.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Questões temáticas mistas</div><div class="day-detail">10 questões das provas 2025–2026 com esses temas.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 4 -->
+    <div class="phase-header reveal">
+      <div class="phase-num">04</div>
+      <div class="phase-info">
+        <h3>Revisão Final & Simulados das Provas Recentes</h3>
+        <p>Semanas 11–12 · Consolidação total e simulados das provas 2025 e 2026</p>
+      </div>
+    </div>
+
+    <!-- S11 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 11</span>
+        <span class="week-title">Revisão Geral + Redação + Simulado da Prova 2025</span>
+        <div class="week-meta">
+          <span class="week-tag wt-rev">Revisão</span>
+          <span class="week-tag wt-sim">Simulado</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Zerar as lacunas identificadas em todo o percurso. Praticar redação (narrativa e dissertativa). Fazer a prova mais difícil do período (2025 — 64 questões).
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Revisão PT + Inglês</div><div class="day-detail">Rever fichas de figuras de linguagem e modal verbs. 10 questões de cada.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Revisão MAT + Log</div><div class="day-detail">Revisão de fórmulas e 15 questões mistas de Matemática.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Revisão BIO + QUI + FIS</div><div class="day-detail">Fichas de fórmulas e conceitos-chave. 5 questões de cada.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Prática de Redação</div><div class="day-detail">Escrever 1 texto narrativo e 1 dissertativo com os temas das coletâneas das provas.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Simulado — Prova 2025</div><div class="day-detail">Prova inteira da FATEC 2025 (64 questões). Condições reais, 5h.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Correção e análise</div><div class="day-detail">Corrigir simulado. Comparar resultado com semanas 4 e 8.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso</div></div>
+        </div>
+        <div class="simulado-box">
+          <strong>🎯 Simulado desta semana</strong>
+          Use a prova completa do Vestibular FATEC 2025 (64 questões — a mais longa e difícil do período). É a prova mais próxima do nível atual da banca.
+        </div>
+      </div>
+    </div>
+
+    <!-- S12 -->
+    <div class="week-card reveal">
+      <div class="week-header" onclick="toggleWeek(this)">
+        <span class="week-num">SEM 12</span>
+        <span class="week-title">🏁 Reta Final — Simulado da Prova 2026 + Ajustes Finais</span>
+        <div class="week-meta">
+          <span class="week-tag wt-rev">Revisão</span>
+          <span class="week-tag wt-sim">Simulado Final</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="week-body">
+        <div class="goal-box">
+          <strong>Meta da semana</strong>
+          Consolidar tudo. Fazer a prova mais recente disponível (2026) para calibrar o desempenho real esperado na próxima edição. Ajustes mínimos e descanso estratégico.
+        </div>
+        <div class="days-grid">
+          <div class="day-box"><div class="day-name">Segunda</div><div class="day-subject">Flash cards gerais</div><div class="day-detail">Revisar fichas de todas as disciplinas. Foco nos pontos mais errados.</div></div>
+          <div class="day-box"><div class="day-name">Terça</div><div class="day-subject">Revisão temática recente</div><div class="day-detail">IA, fake news, sustentabilidade, biotecnologia. 15 questões mistas 2025–2026.</div></div>
+          <div class="day-box"><div class="day-name">Quarta</div><div class="day-subject">Simulado — Prova 2026</div><div class="day-detail">Prova inteira da FATEC 1º sem 2026 (60 questões). Condições reais, 5h.</div></div>
+          <div class="day-box"><div class="day-name">Quinta</div><div class="day-subject">Correção e análise final</div><div class="day-detail">Avaliar evolução total. Listar os 5 temas que ainda precisam de atenção.</div></div>
+          <div class="day-box"><div class="day-name">Sexta</div><div class="day-subject">Reforço mínimo</div><div class="day-detail">Apenas os 5 temas identificados. Máx. 2h de estudo.</div></div>
+          <div class="day-box"><div class="day-name">Sábado</div><div class="day-subject">Descanso ativo</div><div class="day-detail">Revisão visual (mapas mentais, fichas) por 1h máx. Sem questões novas.</div></div>
+          <div class="day-box"><div class="day-name">Domingo</div><div class="day-rest">Descanso total</div></div>
+        </div>
+        <div class="simulado-box">
+          <strong>🎯 Simulado final</strong>
+          Use a prova completa do Vestibular FATEC 1º Semestre 2026 (60 questões). Esta é a prova mais próxima em formato e tendências da próxima edição. Seu desempenho aqui é o melhor preditor do resultado real.
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
-<div class="polemic">
-<div class="polemic-t">Tema 4 — Bioeconomia e conhecimentos tradicionais invisibilizados <span class="badge b-amber">média probabilidade</span></div>
-<div class="polemic-b">
-<strong>Tensão central:</strong> a "inovação em bioeconomia" frequentemente reembala conhecimentos de populações indígenas e tradicionais como novidade tecnológica — sem reconhecimento ou compensação. O conhecimento científico e o tradicional não são opostos: são complementares.<br/><br/>
-<strong>Dado concreto:</strong> as quebradeiras de coco babaçu (mais de 300 mil mulheres no Maranhão, Piauí e Pará) praticam bioeconomia há gerações — extrativismo sustentável, preservação do ecossistema, identidade cultural e renda. Nenhuma startup é necessária para isso.<br/><br/>
-<strong>Dado histórico:</strong> as tecnologias africanas trazidas ao Brasil — bateia (levigação), cadinho (fundição), sistemas agrícolas complexos — revolucionaram a economia colonial, mas foram apropriadas sem reconhecimento. O Barão de Eschwege adaptou o cadinho e hoje tem estátuas. Os africanos que ensinaram a ele, não se sabe o nome.<br/><br/>
-<strong>Como usar:</strong> argumento de que desenvolvimento sustentável exige reconhecimento jurídico e econômico dos saberes tradicionais, não apenas adoção de novas tecnologias — conecta bioeconomia, representatividade e papel do Estado.
+</section>
+
+<!-- ░░ ETAPA 5 ░░ -->
+<section id="etapa5">
+  <div class="section-label">Etapa 05</div>
+  <h2>Dicas Estratégicas</h2>
+  <p class="section-desc">As 5 questões-tipo mais prováveis, armadilhas recorrentes e recursos de estudo.</p>
+
+  <div class="tips-grid reveal">
+
+    <div class="tip-card" style="grid-column: 1 / -1;">
+      <h3><span style="color:var(--accent);">🎯</span> 5 Questões-Tipo Mais Prováveis na Próxima Prova</h3>
+      <div class="tip-item">
+        <span class="tip-icon">1️⃣</span>
+        <div><strong>Texto-âncora sobre tecnologia ou IA</strong> + pergunta sobre ironia/personificação ou interpretação crítica — padrão em 100% das provas. Sempre há uma charge ou tirinha sobre avanço tecnológico e seus impactos socioambientais.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">2️⃣</span>
+        <div><strong>Função matemática aplicada a contexto real</strong> (crescimento de bactérias, aerogerador de energia, altura de roda-gigante, emissão de CO₂) — presente nas últimas 3 provas. Exige saber identificar qual tipo de função é o modelo.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">3️⃣</span>
+        <div><strong>Biologia + Saúde Pública</strong>: questão sobre transmissão de doença (via fecal-oral, picada de inseto, contato direto) ou sobre genética (heredograma ou DNA recombinante). Aparece em todas as edições sem exceção.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">4️⃣</span>
+        <div><strong>Química: equação ou cálculo energético contextualizado</strong> — combustão, biocombustíveis, eletrólise ou cálculo de pH com log. A prova sempre ancora a Química em alguma inovação tecnológica ou ambiental.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">5️⃣</span>
+        <div><strong>História do Brasil Republic / Era Vargas ou contexto global recente</strong> (Guerra Fria, Revolução Industrial, Belle Époque) — tema com crescimento em 2025 e 2026. Combina com pergunta sobre consequências tecnológicas ou sociais do período.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <h3><span style="color:var(--red);">⚠️</span> 3 Armadilhas Recorrentes</h3>
+      <div class="tip-item">
+        <span class="tip-icon">🪤</span>
+        <div><strong>Alternativas com partes corretas e partes erradas</strong>: A FATEC costuma criar alternativas onde a primeira metade está correta mas a segunda invalida o item. Leia TODA a alternativa antes de marcar.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">🪤</span>
+        <div><strong>Confundir "de acordo com o texto" com conhecimento prévio</strong>: Várias questões pedem o que O TEXTO diz, não o que você sabe. Uma alternativa pode ser cientificamente correta mas o texto não a menciona — e aí está errada.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">🪤</span>
+        <div><strong>Cálculo com unidades trocadas</strong>: Questões de Física e Química frequentemente exigem conversão (kWh → Wh, toneladas → gramas, nm → m). A alternativa errada costuma ser o resultado sem a conversão.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <h3><span style="color:var(--yellow);">💡</span> Recursos Recomendados por Tema</h3>
+      <div class="tip-item">
+        <span class="tip-icon">📘</span>
+        <div><strong>Língua Portuguesa</strong>: Exercícios de interpretação com textos de revistas científicas e charges. Praticar identificar a tese central em 2 min de leitura.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">📐</span>
+        <div><strong>Matemática</strong>: Listas de exercícios contextualizados (não apenas algorítmicos). Praticar modelagem: "qual função descreve esse fenômeno?"</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">🧬</span>
+        <div><strong>Biologia</strong>: Tabelas comparativas de doenças (transmissão, agente, prevenção). Árvores de heredograma para treinar rapidez.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">⚗️</span>
+        <div><strong>Química</strong>: Fichas de fórmulas organizadas por tema. Exercícios de estequiometria aplicada (emissão de CO₂, combustíveis).</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">⚡</span>
+        <div><strong>Física</strong>: Resolver questões com dados numéricos variados para treinar cálculo rápido. Focar nas fórmulas mais cobradas: P=VI, v=λf, Q=mcΔT.</div>
+      </div>
+      <div class="tip-item">
+        <span class="tip-icon">🌍</span>
+        <div><strong>História/Geo</strong>: Linha do tempo dos principais eventos + mapas mentais de causas e consequências. Conectar eventos com avanços tecnológicos.</div>
+      </div>
+    </div>
+
   </div>
-</div>
-<div class="sec" style="margin-top:1.5rem">Temas prováveis para FATEC 2027 — projeção baseada no padrão histórico</div>
-<div class="card">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">IA, privacidade e vigilância digital <span class="badge b-red">alta probabilidade</span></div>
-<div class="rd">Nunca foi tema central de redação mas aparece constantemente nas questões objetivas de todas as disciplinas. A FATEC segue o ciclo tecnologia → impacto social → pergunta normativa, e privacidade é o próximo passo natural.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Água: acesso, saneamento e desigualdade <span class="badge b-red">alta probabilidade</span></div>
-<div class="rd">Saneamento básico aparece como proposta de solução na prova 2025 (Q18). A FATEC frequentemente usa a pauta do acesso universal a bens essenciais como tema de redação — água é o bem essencial mais diretamente ligado à saúde pública.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div>
-<div class="rt">Resíduos eletrônicos e obsolescência programada <span class="badge b-amber">média probabilidade</span></div>
-<div class="rd">Aparece nos textos motivadores da prova 2025. Conecta Química (metais pesados), História (Revolução Industrial) e consumo. A charge da "Crise Climática" (prova 2025) já antecipou o tema.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div>
-<div class="rt">Diversidade racial e tecnologia (algoritmos com viés) <span class="badge b-amber">média probabilidade</span></div>
-<div class="rd">Representatividade foi tema duas vezes (2022 e 2024). A versão 2027 pode cruzar com o eixo tecnológico: algoritmos de reconhecimento facial com erro maior para pessoas negras, viés em sistemas de IA treinados com dados históricos não-representativos.</div>
-</div></div>
-</div>
-</div>
-<div class="tip"><strong>Como estudar temas polêmicos:</strong> para cada tema, dominar mentalmente 3 elementos — (1) a tensão central (qual é o dilema?); (2) o dado concreto que o fundamenta; (3) a proposta de solução com agente, ação e finalidade. Não memorize textos prontos — internalize a estrutura lógica e adapte no dia da prova.</div>
-</div><!-- /polemicos -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 9 — DIA D
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="dayd">
-<div class="sec">estratégia completa para o dia da prova</div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Véspera</span><span class="dtitle">Na véspera da prova</span></div><div class="card-body">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Revisão leve de 1h — nada além disso</div>
-<div class="rd">Reler apenas o checklist de redação e as figuras de linguagem mais cobradas. Sem questões, sem simulado. A performance no dia D depende mais de descanso do que de uma última hora de estudo.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Separar o material necessário</div>
-<div class="rd">Documento de identidade original. Caneta esferográfica de tinta azul ou preta (levar 2). Sem calculadora, smartwatch, celular ou qualquer eletrônico que possa emitir som ou vibrar.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#639922"></div><div>
-<div class="rt">Dormir no horário habitual — não tentar dormir mais cedo</div>
-<div class="rd">Alterar o horário de dormir na véspera costuma piorar a qualidade do sono. Manter a rotina normal.</div>
-</div></div>
-</div>
-</div></div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Estratégia</span><span class="dtitle">Ordem de resolução recomendada nas 5 horas</span></div><div class="card-body">
-<div class="rows">
-<div class="step">
-<div class="stepnum">1</div>
-<div class="step-body">
-<div class="st">0h–1h — Português e Inglês (~15 questões)</div>
-<div class="sd">Questões mais rápidas e que constroem confiança para a segunda metade. Ler o texto completo antes das questões — nunca partir direto para as alternativas. Figuras de linguagem: identificar pelo efeito no texto, não pelo nome decorado.</div>
-</div>
-</div>
-<div class="step">
-<div class="stepnum">2</div>
-<div class="step-body">
-<div class="st">1h–2h — Matemática (~12 questões)</div>
-<div class="sd">Começar pelas funções (substituir valores dados no enunciado). Deixar para o final as questões de geometria com mais etapas. Regra dos 4 min: se travar sem resposta → marcar melhor alternativa → pular → voltar se sobrar tempo.</div>
-</div>
-</div>
-<div class="step">
-<div class="stepnum">3</div>
-<div class="step-body">
-<div class="st">2h–3h — Ciências (~16 questões)</div>
-<div class="sd">Ler o texto de contexto antes do enunciado da questão — a resposta quase sempre está no texto. Para química: identificar o que está sendo pedido (equação? separação? função orgânica?) antes de calcular. Não memorize reações — use o texto.</div>
-</div>
-</div>
-<div class="step">
-<div class="stepnum">4</div>
-<div class="step-body">
-<div class="st">3h–3h30 — Humanas (~12 questões)</div>
-<div class="sd">Questões interpretativas — a resposta correta é a que melhor se alinha com o texto ou contexto apresentado, não necessariamente a que você memorizou. Cuidado com alternativas que são "tecnicamente certas" mas não respondem ao que o texto pergunta.</div>
-</div>
-</div>
-<div class="step">
-<div class="stepnum">5</div>
-<div class="step-body">
-<div class="st">3h30–5h — Redação (1h30 inteiros — não economize)</div>
-<div class="sd">30 min de rascunho (estrutura + argumentos + conclusão). 50 min copiando para a Folha de Redação. 10 min de revisão. Não assinar nem colocar nome na Folha de Redação — eliminação automática. Usar título obrigatoriamente.</div>
-</div>
-</div>
-</div>
-</div></div>
-<div class="card collapsible">
-<div class="dh"><span class="dbadge b-red">Táticas</span><span class="dtitle">Quando pular, quando revisar, como não zerar</span></div><div class="card-body">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Responda TODAS as questões — sem exceção</div>
-<div class="rd">A FATEC conta somente os acertos — não há desconto por erro. Nunca deixar em branco. Se travar em uma questão: marcar a alternativa B ou C (estatisticamente mais frequentes em vestibulares), seguir em frente.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div>
-<div class="rt">Regra dos 4 minutos — aplicar sem culpa</div>
-<div class="rd">4 min em uma questão sem resposta confiante = marcar a melhor alternativa, circular o número no caderno e seguir. Voltar apenas se sobrar tempo no bloco. Não é desistência — é gestão de tempo.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div>
-<div class="rt">Como não zerar a redação (risco de eliminação)</div>
-<div class="rd">Garantias mínimas: ter título, organizar em parágrafos, não copiar textos da coletânea, não assinar a folha, escrever em norma culta. Uma redação com estrutura básica e conclusão genérica não zera. Uma redação sem título ou copiada, sim.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div>
-<div class="rt">Armadilha do Português: questões com ironia</div>
-<div class="rd">A FATEC usa textos com ironia. "O texto afirma que a tecnologia é boa" pode ser errado se o texto usa ironia para criticar exatamente isso. Sempre identificar o tom antes de responder — ler a intenção do autor, não só o conteúdo literal.</div>
-</div></div>
-<div class="row"><div class="dot" style="background:#639922"></div><div>
-<div class="rt">Pode sair com o caderno de questões a partir das 15h30</div>
-<div class="rd">Use para conferir as respostas em casa comparando com o gabarito que sai no site vestibular.fatec.sp.gov.br. Não sair antes — a Folha de Respostas fica com o fiscal e não pode ser substituída.</div>
-</div></div>
-</div>
-</div></div>
-<div class="alert"><strong>Proibido no dia da prova:</strong> calculadora, celular (desligar completamente — sem vibração — até sair do prédio), régua, compasso, transferidor, smartwatch, boné, chapéu, óculos escuros, corretivo. Qualquer equipamento eletrônico que emita sinal. Chegar após as 13h = impedimento de entrar.</div>
-</div><!-- /dayd -->
-<!-- ══════════════════════════════════════════════════════════
-     PAINEL 10 — RESUMO
-     ══════════════════════════════════════════════════════════ -->
-<div class="panel" id="resumo">
-<div class="sec">Resumo geral do plano</div>
-<div class="grid4">
-<div class="mc"><div class="mc-l">Total de horas</div><div class="mc-v">~48h</div></div>
-<div class="mc"><div class="mc-l">Redações completas</div><div class="mc-v">6 → 10</div></div>
-<div class="mc"><div class="mc-l">Questões práticas</div><div class="mc-v">~200</div></div>
-<div class="mc"><div class="mc-l">Simulados completos</div><div class="mc-v">2 × 5h</div></div>
-</div>
-<div class="sec">Distribuição de tempo por área</div>
-<div class="bar-w"><div class="bar-l"><span>Ciências (Química + Bio + Física)</span><span>~13h · 27%</span></div><div class="bar-t"><div class="bar-f" style="width:27%;background:#1D9E75"></div></div></div>
-<div class="bar-w"><div class="bar-l"><span>Matemática</span><span>~11h · 23%</span></div><div class="bar-t"><div class="bar-f" style="width:23%;background:#185FA5"></div></div></div>
-<div class="bar-w"><div class="bar-l"><span>Português + Inglês</span><span>~10h · 21%</span></div><div class="bar-t"><div class="bar-f" style="width:21%;background:#534AB7"></div></div></div>
-<div class="bar-w"><div class="bar-l"><span>Humanas (História + Geo)</span><span>~7h · 15%</span></div><div class="bar-t"><div class="bar-f" style="width:15%;background:#BA7517"></div></div></div>
-<div class="bar-w"><div class="bar-l"><span>Redação (1.5h/semana + extras)</span><span>~7h · 14%</span></div><div class="bar-t"><div class="bar-f" style="width:14%;background:#A32D2D"></div></div></div>
-<div class="sec" style="margin-top:1.5rem">Rastreamento das 10 redações — clique ao concluir</div>
-<div class="card" style="overflow-x:auto">
-<table class="ttable">
-<thead><tr><th>#</th><th>Tema</th><th>Semana</th><th>Foco técnico</th><th>Feita?</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Tecnologia e desinformação (real — 2026)</td><td>Sem. 1</td><td>Estrutura completa + checklist</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>2</td><td>Tecnologia e sustentabilidade (real — 2025)</td><td>Sem. 2</td><td>Dado concreto em cada parágrafo</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>3</td><td>Tema polêmico — livre (IA ou negacionismo)</td><td>Sem. 3</td><td>Conclusão propositiva e específica</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>4</td><td>Representatividade na Arte (real — 2024)</td><td>Sem. 4</td><td>2 referências distintas por argumento</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>5</td><td>IA e emprego (polêmico)</td><td>Sem. 5</td><td>Contraponto + refutação embasada</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>6</td><td>Reescrita da redação do 1º simulado</td><td>Sem. 5</td><td>Reescrever intro + conclusão apenas</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>7</td><td>Bioeconomia e povos tradicionais</td><td>Pós-sem. 5</td><td>Vocabulário técnico + dados IBGE</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>8</td><td>Água, saneamento e desigualdade</td><td>Pós-sem. 5</td><td>Proposta com agente institucional</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>9</td><td>Privacidade e IA (provável 2027)</td><td>Pós-sem. 5</td><td>Equilíbrio entre dois argumentos</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-<tr><td>10</td><td>Tema surpresa — simular o dia D</td><td>Pré-prova</td><td>Velocidade + qualidade + 1h30 cronometrado</td><td><span class="cb" onclick="this.classList.toggle('done')"></span></td></tr>
-</tbody>
-</table>
-</div>
-<div class="sec" style="margin-top:1.5rem">Glossário de termos recorrentes nas provas FATEC</div>
-<div class="card">
-<div class="rows">
-<div class="row"><div class="dot" style="background:#1D9E75"></div><div><div class="rt">FBN — Fixação Biológica do Nitrogênio</div><div class="rd">Bactérias do gênero Rhizobium convertem N₂ atmosférico em compostos nitrogenados assimiláveis pelas leguminosas. Base da adubação verde e alternativa sustentável aos fertilizantes químicos.</div></div></div>
-<div class="row"><div class="dot" style="background:#1D9E75"></div><div><div class="rt">ΔH — variação de entalpia</div><div class="rd">ΔH negativo = reação exotérmica (libera calor para o ambiente). Positivo = endotérmica (absorve calor). Catalisador reduz a energia de ativação mas NÃO altera o valor de ΔH.</div></div></div>
-<div class="row"><div class="dot" style="background:#1D9E75"></div><div><div class="rt">CO₂eq — dióxido de carbono equivalente</div><div class="rd">Unidade que converte diferentes gases de efeito estufa (metano, N₂O, etc.) em uma medida comparável ao CO₂. Usada para calcular pegada de carbono de alimentos, processos industriais e atividades humanas.</div></div></div>
-<div class="row"><div class="dot" style="background:#185FA5"></div><div><div class="rt">Meio técnico-científico-informacional (Milton Santos)</div><div class="rd">Período pós-Segunda Guerra em que ciência, técnica e informação se fundem no espaço geográfico. A globalização tecnológica integra lugares mas também aprofunda desigualdades de acesso.</div></div></div>
-<div class="row"><div class="dot" style="background:#185FA5"></div><div><div class="rt">CCS — Carbon Capture and Storage</div><div class="rd">Tecnologia que captura CO₂ nas fontes de emissão industrial, transporta e armazena em locais subterrâneos adequados. Apareceu na prova 2025 (Q31) em texto em inglês.</div></div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div><div class="rt">Intemperismo físico vs. químico</div><div class="rd">Físico: fragmentação da rocha por variações de temperatura e pressão — predomina em desertos e regiões polares. Químico: reação com água líquida — predomina em florestas tropicais e úmidas.</div></div></div>
-<div class="row"><div class="dot" style="background:#BA7517"></div><div><div class="rt">Pegada de carbono</div><div class="rd">Total de emissões de gases de efeito estufa geradas por um produto, atividade ou pessoa ao longo de todo o seu ciclo de vida. Medida em kg de CO₂eq.</div></div></div>
-<div class="row"><div class="dot" style="background:#7F77DD"></div><div><div class="rt">Cherry picking</div><div class="rd">Selecionar apenas os dados que confirmam uma posição, ignorando as evidências contrárias. Forma de desinformação que não usa mentiras explícitas — apareceu em texto de inglês na prova 2023.</div></div></div>
-<div class="row"><div class="dot" style="background:#7F77DD"></div><div><div class="rt">Food miles</div><div class="rd">Distância percorrida por um alimento desde sua origem até o consumidor final. Quanto maior a distância, maior o impacto ambiental do transporte — apareceu na prova 2025 (Q56–57).</div></div></div>
-<div class="row"><div class="dot" style="background:#A32D2D"></div><div><div class="rt">Deep tech</div><div class="rd">Startups baseadas em conhecimento científico profundo (biotecnologia, IA, hardware avançado) para resolver problemas complexos de alto impacto. Apareceu na prova 2026 (Q59–60).</div></div></div>
-</div>
-</div>
-<div class="tip"><strong>Última dica:</strong> a FATEC não cobra enciclopédia. Cobra raciocínio contextualizado. Em toda questão, a pergunta real é: "você consegue ler um texto sobre um tema que nunca estudou especificamente e aplicar o conceito que já conhece?" Treinar isso — lendo textos científicos e respondendo questões com contexto — é mais eficaz do que memorizar fatos isolados.</div>
-</div><!-- /resumo -->
-</div><!-- /wrap -->
+
+  <!-- Resumo Final -->
+  <div class="card reveal" style="background: linear-gradient(135deg, rgba(0,229,160,0.06) 0%, rgba(124,111,255,0.06) 100%); border-color: rgba(0,229,160,0.2);">
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.06em;margin-bottom:1rem;color:var(--accent);">🏆 Resumo Estratégico Final</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;font-size:0.85rem;line-height:1.6;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:0.4rem;">Prioridade máxima</div>
+        Português e Matemática representam juntos ~37% das questões. Nunca negligencie essas duas disciplinas — elas são a base da prova.
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:0.4rem;">Diferencial competitivo</div>
+        História e Geografia cresceram em peso recentemente e muitos candidatos subestimam. Dominar esses temas pode ser o diferencial entre ser aprovado ou não.
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:0.4rem;">Tema transversal</div>
+        A FATEC sempre ancora as questões em um tema da atualidade (tecnologia, arte, sustentabilidade). Ler sobre o tema do ano antes da prova ajuda a entender os textos mais rapidamente.
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:0.4rem;">Simulados são essenciais</div>
+        Fazer as provas reais em condições reais é insubstituível. O formato da FATEC é único — a leitura de textos longos sob pressão de tempo precisa ser treinada.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Análise baseada nas provas FATEC 1º sem/2023, 1º sem/2024, 2025 e 1º sem/2026 · Gerado com análise pedagógica estruturada
+</footer>
+
 <script>
-function go(id) {
-  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('on'); });
-  document.getElementById(id).classList.add('on');
-  var ids = ['s1','s2','s3','s4','s5','eixos','polemicos','dayd','resumo'];
-  document.querySelectorAll('.tab').forEach(function(t,i){
-    t.classList.toggle('active', ids[i] === id);
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const p = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    document.getElementById('progress-bar').style.width = p + '%';
   });
-  window.scrollTo({top:0, behavior:'smooth'});
-}
 
-// Toggle accordion on day cards
-document.addEventListener('click', function(e) {
-  var dh = e.target.closest('.card.collapsible > .dh');
-  if (!dh) return;
-  var card = dh.parentElement;
-  var isOpen = card.classList.contains('open');
-  card.classList.toggle('open', !isOpen);
-});
-
-// Toggle topic done state
-function toggleDone(btn) {
-  btn.classList.toggle('done');
-  var tp = btn.closest('.tp');
-  var isDone = btn.classList.contains('done');
-  tp.classList.toggle('is-done', isDone);
-  btn.textContent = isDone ? '✓ Concluído' : '✓ Concluído';
-  // Persist in localStorage
-  try {
-    var key = 'tp_' + getTopicKey(tp);
-    localStorage.setItem(key, isDone ? '1' : '0');
-  } catch(e) {}
-}
-
-function getTopicKey(tp) {
-  var t = tp.querySelector('.tp-t');
-  return t ? btoa(encodeURIComponent(t.textContent.trim().slice(0,60))).replace(/[^a-z0-9]/gi,'') : Math.random();
-}
-
-// Restore done states on load
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.tp').forEach(function(tp) {
-    try {
-      var key = 'tp_' + getTopicKey(tp);
-      if (localStorage.getItem(key) === '1') {
-        tp.classList.add('is-done');
-        var btn = tp.querySelector('.tp-done-btn');
-        if (btn) btn.classList.add('done');
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        obs.unobserve(e.target);
       }
-    } catch(e) {}
-  });
-});
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => obs.observe(el));
+
+  // Week toggle
+  function toggleWeek(header) {
+    const body = header.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open', !isOpen);
+    header.classList.toggle('open', !isOpen);
+  }
 </script>
 </body>
 </html>
